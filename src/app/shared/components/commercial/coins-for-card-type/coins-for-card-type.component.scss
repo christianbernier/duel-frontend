@@ -1,0 +1,10 @@
+.commercial-coins-for-card-type {
+  width: 30px;
+  position: relative;
+
+  &>duel-coin-badge {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+}

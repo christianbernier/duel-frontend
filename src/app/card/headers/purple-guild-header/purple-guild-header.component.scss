@@ -1,0 +1,49 @@
+.card-header-color {
+  display: flex;
+  gap: 10px;
+
+  .purple-guild-per-wonder {
+    position: relative;
+
+    &>.purple-guild-victory-points-badge {
+      position: absolute;
+      right: -20%;
+      bottom: 0;
+    }
+  }
+
+  .purple-guild-per-coins {
+    position: relative;
+
+    &>.purple-guild-victory-points-badge {
+      position: absolute;
+      right: -20%;
+      bottom: -10%;
+    }
+  }
+
+  .purple-guild-per-card-type {
+    position: relative;
+
+    .purple-guild-coin-badge {
+      position: absolute;
+      left: -50%;
+      bottom: -30%;
+    }
+
+    .purple-guild-victory-points-badge {
+      position: absolute;
+      right: -80%;
+      bottom: -30%;
+    }
+
+    .purple-guild-card-collection {
+      display: flex;
+      flex-direction: row;
+
+      duel-card-icon:not(:first-of-type) {
+        margin-left: -10px;
+      }
+    }
+  }
+}

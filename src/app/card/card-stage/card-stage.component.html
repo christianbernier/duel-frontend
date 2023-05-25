@@ -1,0 +1,24 @@
+<div class="card-stage--container">
+  <div
+    *ngFor="let row of cards; let index = index"
+    class="card-stage--row-container"
+    style="{{'--card-stage--row-index: ' + index + ';'}}"
+  >
+    <div class="card-stage--row">
+      <div *ngFor="let card of row">
+        <duel-card
+          *ngIf="card.type === 'FACE_UP'"
+          [card]="card.faceUpCard"
+          (click)="cardClicked(card.faceUpCard)"
+        ></duel-card>
+
+        <duel-card-flipped
+          *ngIf="card.type === 'FACE_DOWN'"
+          [type]="card.faceDownCard"
+        ></duel-card-flipped>
+
+        <div *ngIf="card.type === 'PLACEHOLDER'" class="card-stage--empty-slot"></div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,56 @@
+.army-stage--container {
+  background-color: #650707;
+  width: fit-content;
+  padding: 10px;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+
+  .army-stage--token-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+  }
+
+  .army-stage--token-container > div {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .army-stage--token-position {
+    width: 30px;
+    height: 70px;
+    outline: 1px solid var(--red);
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &.army-stage--victory-position-a,
+    &.army-stage--victory-position-b {
+      & > img {
+        width: 20px;
+        height: 20px;
+      }
+    }
+
+    &.army-stage--victory-position-a > img {
+      transform: rotate(-90deg);
+    }
+
+    &.army-stage--victory-position-b > img {
+      transform: rotate(90deg);
+    }
+  }
+
+  .army-stage--points {
+    height: 30px;
+  }
+
+  .army-stage--occupied {
+    background-color: var(--red);
+  }
+}

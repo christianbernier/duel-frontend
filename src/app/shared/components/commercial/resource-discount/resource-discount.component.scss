@@ -1,0 +1,9 @@
+.commercial-resource-discount {
+  position: relative;
+
+  &>duel-coin-badge {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}

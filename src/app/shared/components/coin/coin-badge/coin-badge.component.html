@@ -1,0 +1,9 @@
+<div
+  class="coin coin-badge-container"
+  [ngClass]="{
+    'coin-badge-large': size === 'LARGE',
+    'coin-badge-small': size === 'SMALL',
+  }"
+>
+  <span class="coin-text">{{ value }}</span>
+</div>

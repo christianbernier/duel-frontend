@@ -1,0 +1,18 @@
+.link-symbol-container {
+  display: inline-block;
+
+  &.large-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  &.small-icon {
+    width: 12px;
+    height: 12px;
+  }
+
+  & > img {
+    width: 100%;
+    height: 100%;
+  }
+}

@@ -1,0 +1,32 @@
+<div class="card-header-color bg-yellow">
+  <!-- Coins -->
+  <duel-coin-symbol *ngIf="card.commercialType === 'COINS'" [value]="card.coins"/>
+
+  <!-- Brown Resource Discount -->
+  <div *ngIf="card.commercialType === 'BROWN_RESOURCE_DISCOUNT'">
+    <duel-resource-discount [resource]="card.resource" [value]="1"/>
+  </div>
+
+  <!-- Gray Resource Discount -->
+  <div *ngIf="card.commercialType === 'GRAY_DISCOUNT_RESOURCE'" class="yellow-commercial-multiple-resource-discount">
+    <duel-resource-discount *ngFor="let resource of card.resources" [resource]="resource" [value]="1"/>
+  </div>
+
+  <!-- Any Brown Resource -->
+  <duel-any-of-resource-type *ngIf="card.commercialType === 'ANY_BROWN_RESOURCE'" [type]="'BROWN'"/>
+
+  <!-- Any Gray Resource -->
+  <duel-any-of-resource-type *ngIf="card.commercialType === 'ANY_GRAY_RESOURCE'" [type]="'GRAY'"/>
+
+  <!-- Coins for Card Type -->
+  <div *ngIf="card.commercialType === 'COINS_PER_CARD'" class="yellow-commercial-coins-for-card">
+    <duel-coins-for-card-type  [cardType]="card.coinsForCardType" [value]="card.coinsPerCard"/>
+    <duel-victory-points [number]="card.victoryPoints"/>
+  </div>
+
+  <!-- Coins for Wonder -->
+  <div *ngIf="card.commercialType === 'COINS_PER_WONDER'" class="yellow-commercial-coins-for-card">
+    <duel-coins-for-wonder [value]="card.coinsPerWonder"/>
+    <duel-victory-points [number]="card.victoryPoints"/>
+  </div>
+</div>

@@ -1,0 +1,24 @@
+.science-stage--container {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  background-color: #153f0e;
+  padding: 10px;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  width: fit-content;
+
+  .science-stage--place {
+    width: 75px;
+    heigth: 75px;
+    display: inline-block;
+
+    & > .science-stage-empty-token {
+      width: 75px;
+      height: 75px;
+      border-radius: 50%;
+      background: #1f5917;
+    }
+  }
+}

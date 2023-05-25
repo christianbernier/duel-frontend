@@ -1,0 +1,8 @@
+.coin-symbol-container {
+  width: 30px;
+  height: 30px;
+
+  &>.coin-text {
+    font-size: 1rem;
+  }
+}

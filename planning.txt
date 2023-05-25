@@ -1,0 +1,61 @@
+Duel
+Started: Apr. 1, 2023
+
+Frontend
+  - Cards
+    - Unit tests
+  - Game status board
+    - Integration
+      - Create combo "game status" component
+    - Unit tests
+  - Coins
+    - Create components for 1, 3, 6 coins
+    - Create algorithm for determining which coins should be displayed
+    - Make sure view scrolls if the coin pile is too wide
+    - Unit tests
+  - Wonders
+    - Create images for each wonder
+    - Create icon images for wonder actions
+    - Create wonder model
+    - Component
+      - Display costs
+      - Display wonder actions
+      - Have ability to place a card underneath
+      - Have ability to "disable" for when 7 wonders have been activated
+    - Unit tests
+  - Player state layout
+    - Create player state model
+    - Create "card stack" component
+      - 1 stack for each type? 1 big stack?
+      - Vertical stack, probably
+    - Component
+      - Layout name, coins, science tokens, cards
+    - Unit tests
+  - Central card layout
+    - Unit tests
+  - Game room layout
+    - Create room state model
+    - Display two player state components, game state component, central card layout, trash pile
+    - Display room info? Player names? Room UID?
+    - Unit tests
+  - Routing
+    - Create / endpoint for homepage
+    - Create /play/:uid endpoint for game page
+    - Unit tests?
+  - Socket service
+    - Create injectable Angular service to deal with Web Sockets
+    - Abstract the room joining/creating network requirements to another service
+    - Unit tests
+  - Home page
+    - Create design
+    - Make way to join and create a room
+    - Unit tests
+  - Integration
+    - Make it work with the backend!
+    - Integration tests?
+    - End-to-end tests?
+
+Backend
+  - Models
+  - Game controller
+  - Socket stuff

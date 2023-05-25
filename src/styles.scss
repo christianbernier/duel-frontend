@@ -1,1 +1,60 @@
-/* You can add global styles to this file, and also import other style files */
+/* Global Styles */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Quicksand:wght@300;400;600;700&display=swap');
+
+:root {
+  --brown: #381E0B;
+  --gray: #606165;
+  --red: #c71e1e;
+  --green: #296e1a;
+  --yellow: #CDA415;
+  --blue: #495ab9;
+  --purple: #6C3381;
+
+  --font-primary: Oswald, sans-serif;
+}
+
+.bg-brown {
+  background-color: var(--brown);
+}
+
+.bg-gray {
+  background-color: var(--gray);
+}
+
+.bg-red {
+  background-color: var(--red);
+}
+
+.bg-green {
+  background-color: var(--green);
+}
+
+.bg-yellow {
+  background-color: var(--yellow);
+}
+
+.bg-blue {
+  background-color: var(--blue);
+}
+
+.bg-purple {
+  background-color: var(--purple);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin: 0;
+}
+
+.card-header-color {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}

@@ -1,0 +1,14 @@
+.coin {
+  background-color: #d3b00b;
+  border: 4px double #9b7f0a;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.coin-text {
+  font-family: var(--font-primary);
+  color: #eee;
+  font-weight: 700;
+}

@@ -1,0 +1,17 @@
+.coin-badge-container.coin-badge-small {
+  width: 10px;
+  height: 10px;
+
+  &>.coin-text {
+    font-size: 8px;
+  }
+}
+
+.coin-badge-container.coin-badge-large {
+  width: 15px;
+  height: 15px;
+
+  &>.coin-text {
+    font-size: 10px;
+  }
+}

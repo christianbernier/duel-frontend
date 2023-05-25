@@ -1,0 +1,23 @@
+.card-flipped-wrapper {
+  width: 100px;
+  height: 150px;
+  border-radius: 10px;
+  outline: 6px solid #222;
+  outline-offset: -6px;
+
+  &.bg-brown {
+    background-color: #885720;
+  }
+
+  &.bg-blue {
+    background-color: #6092ff;
+  }
+
+  &.bg-pink {
+    background-color: #b779ef;
+  }
+
+  &.bg-purple {
+    background-color: #404091;
+  }
+}

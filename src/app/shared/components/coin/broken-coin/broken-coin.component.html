@@ -1,0 +1,10 @@
+<div
+  class="coin coin-broken-symbol-container"
+  [ngClass]="{
+    'coin-broken-large': size === 'LARGE',
+    'coin-broken-small': size === 'SMALL',
+  }"
+>
+  <span class="coin-text">{{ value }}</span>
+  <div class="coin-broken--crack"></div>
+</div>

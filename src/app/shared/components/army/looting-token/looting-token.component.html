@@ -1,0 +1,11 @@
+<div
+  class="looting-token--container"
+  [ngClass]="{
+    'looting-token--large': size === 'LARGE',
+    'looting-token--small': size === 'SMALL',
+    'looting-token-5': value === 5,
+    'looting-token-2': value === 2,
+  }"
+>
+  <duel-broken-coin [value]="value" [size]="size"/>
+</div>

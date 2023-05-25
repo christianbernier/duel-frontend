@@ -1,0 +1,33 @@
+.card-stage--container {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+
+  .card-stage--row-container {
+    z-index: calc(var(--card-stage--row-index) + 10);
+
+    &:not(:first-of-type) {
+      margin-top: -100px;
+    }
+
+    &:nth-of-type(2n) {
+      transform: translateX(-50px);
+    }
+  }
+
+  .card-stage--row {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+
+    div:has(.card-stage--empty-slot) {
+      opacity: 0;
+    }
+
+    .card-stage--empty-slot {
+      width: 100px;
+      height: 150px;
+      opacity: 0;
+    }
+  }
+}

@@ -1,0 +1,6 @@
+<div class="any-of-resource">
+  <div *ngFor="let resource of resources; let i = index" class="resource-type-container">
+    <duel-resource [resource]="resource" [size]="resourceSize"/>
+    <span *ngIf="i !== resources.length - 1">/</span>
+  </div>
+</div>

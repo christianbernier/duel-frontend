@@ -1,0 +1,37 @@
+<div>
+  Room container:
+  <button
+    (click)="joinRoom()"
+  >
+    Join room with uid 'test'
+  </button>
+  <button
+    (click)="startGame()"
+  >
+    Start game
+  </button>
+  <div>uid: {{ roomFacade.roomUid$ | async }}</div>
+  <div>error: {{ roomFacade.joinRoomError$ | async }}</div>
+<!--  <div>state: {{ roomFacade.gameState$ | async | stringify }}</div>-->
+  <div>server error: {{ roomFacade.serverError$ | async }}</div>
+</div>
+
+<div
+  *ngIf="(roomFacade.gameState$ | async)?.inProgress"
+  class="room--game-in-progress"
+>
+  <div class="room--game-stages">
+    <duel-science-stage
+      [tokens]="(roomFacade.gameState$ | async)!.scienceTokens"
+    ></duel-science-stage>
+    <duel-army-stage
+      [tokenPosition]="(roomFacade.gameState$ | async)!.warStatus"
+      [lootingStatusA]="(roomFacade.gameState$ | async)!.playerA!.warLootingStatus"
+      [lootingStatusB]="(roomFacade.gameState$ | async)!.playerB!.warLootingStatus"
+    ></duel-army-stage>
+  </div>
+  <duel-card-stage
+    [cards]="(roomFacade.gameState$ | async)!.cardStage"
+    (clicked)="cardClicked($event)"
+  ></duel-card-stage>
+</div>

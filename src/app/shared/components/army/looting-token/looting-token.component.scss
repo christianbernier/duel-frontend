@@ -1,0 +1,28 @@
+.looting-token--container {
+  aspect-ratio: 1 / 2;
+  background-color: var(--red);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &.looting-token--large {
+    &.looting-token-5 {
+      width: 50px;
+    }
+
+    &.looting-token-2 {
+      width: 40px;
+    }
+  }
+
+  &.looting-token--small {
+    &.looting-token-5 {
+      width: 30px;
+    }
+
+    &.looting-token-2 {
+      width: 20px;
+    }
+  }
+}

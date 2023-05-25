@@ -1,0 +1,12 @@
+<div
+  class="card-icon"
+  [ngClass]="{
+    'bg-brown': cardType === 'BROWN_PRODUCTION',
+    'bg-gray': cardType === 'GRAY_PRODUCTION',
+    'bg-red': cardType === 'RED_ARMY',
+    'bg-green': cardType === 'GREEN_SCIENCE',
+    'bg-yellow': cardType === 'YELLOW_COMMERCIAL',
+    'bg-blue': cardType === 'BLUE_VICTORY',
+    'bg-purple': cardType === 'PURPLE_GUILD',
+  }"
+></div>

@@ -1,0 +1,28 @@
+<div class="card-header-color bg-purple">
+
+  <duel-dual-arrows-icon/>
+
+  <div>
+    <!-- Victory Points per Wonder -->
+    <div *ngIf="card.guildType === 'VICTORY_POINTS_PER_WONDER'" class="purple-guild-per-wonder">
+      <duel-wonder-icon/>
+      <duel-victory-points-badge [value]="card.victoryPoints" class="purple-guild-victory-points-badge"/>
+    </div>
+
+    <!-- Victory Points per Coins -->
+    <div *ngIf="card.guildType === 'VICTORY_POINTS_PER_COINS'" class="purple-guild-per-coins">
+      <duel-coin-symbol [value]="card.coins"/>
+      <duel-victory-points-badge [value]="card.victoryPoints" class="purple-guild-victory-points-badge"/>
+    </div>
+
+    <!-- Victory Points & Coins per Card Type -->
+    <div *ngIf="card.guildType === 'VICTORY_POINTS_AND_COINS_PER_CARD_TYPE'" class="purple-guild-per-card-type">
+      <div class="purple-guild-card-collection">
+        <duel-card-icon *ngFor="let cardType of card.guildCardTypes" [cardType]="cardType"/>
+      </div>
+      <duel-coin-badge [value]="card.coins" [size]="'SMALL'" class="purple-guild-coin-badge"/>
+      <duel-victory-points-badge [value]="card.victoryPoints" class="purple-guild-victory-points-badge"/>
+    </div>
+  </div>
+
+</div>

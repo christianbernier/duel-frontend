@@ -1,0 +1,33 @@
+.coin-broken-symbol-container {
+  aspect-ratio: 1;
+  position: relative;
+
+  &.coin-broken-large {
+    width: 26px;
+
+    &>.coin-text {
+      font-size: 0.8rem;
+    }
+  }
+
+  &.coin-broken-small {
+    width: 10px;
+
+    &>.coin-text {
+      font-size: 0.5rem;
+    }
+  }
+
+  &>.coin-text {
+    z-index: 2;
+  }
+
+  .coin-broken--crack {
+    position: absolute;
+    transform: rotate(30deg);
+    background: var(--red);
+    height: 5px;
+    width: calc(100% + 8px);
+    z-index: 1;
+  }
+}

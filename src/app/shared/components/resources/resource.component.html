@@ -1,0 +1,14 @@
+<div
+  [ngSwitch]="resource"
+  [ngClass]="{
+    'small-icon': size === 'SMALL',
+    'medium-icon': size === 'MEDIUM',
+  }"
+  class="resource"
+>
+  <duel-wood *ngSwitchCase="'WOOD'"/>
+  <duel-clay *ngSwitchCase="'CLAY'"/>
+  <duel-stone *ngSwitchCase="'STONE'"/>
+  <duel-glass *ngSwitchCase="'GLASS'"/>
+  <duel-papyrus *ngSwitchCase="'PAPYRUS'"/>
+</div>

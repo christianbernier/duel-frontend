@@ -1,0 +1,15 @@
+.card-header-color {
+  &>.yellow-commercial-multiple-resource-discount {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  &>.yellow-commercial-coins-for-card {
+    width: 100%;
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+  }
+}

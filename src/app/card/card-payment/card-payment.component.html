@@ -1,0 +1,29 @@
+<div
+  class="card-payment-wrapper"
+  *ngIf = "coinCost || resourceCost.length !== 0"
+>
+  <div class="card-payment-resources">
+    <duel-coin-badge
+      *ngIf = "coinCost !== 0"
+      [value]="coinCost"
+      [size]="'SMALL'"
+    />
+    <duel-resource
+      *ngFor = "let resource of resourceCost"
+      [resource]="resource"
+      [size]="'SMALL'"
+    />
+  </div>
+</div>
+
+<div
+  class="card-payment-wrapper"
+  *ngIf = "linkSymbol"
+>
+  <div class="card-payment-link">
+    <duel-link-symbol
+      [linkSymbol]="linkSymbol"
+      [size]="'SMALL'"
+    />
+  </div>
+</div>

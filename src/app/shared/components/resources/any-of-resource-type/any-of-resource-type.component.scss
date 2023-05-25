@@ -1,0 +1,16 @@
+.any-of-resource {
+  display: flex;
+
+
+  &>.resource-type-container {
+    display: flex;
+    align-items: center;
+
+    &>span {
+      color: #555;
+      font-size: 1rem;
+      font-weight: 700;
+      padding: 2px;
+    }
+  }
+}

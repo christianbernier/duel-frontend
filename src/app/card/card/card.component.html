@@ -1,0 +1,61 @@
+<div class="card-wrapper">
+
+  <!--  Card Header-->
+  <div class="card-header">
+    <duel-brown-production-header
+      *ngIf="card.cardType === 'BROWN_PRODUCTION'"
+      [producesResources]="card.produces"
+    />
+    <duel-gray-production-header
+      *ngIf="card.cardType === 'GRAY_PRODUCTION'"
+      [producesResources]="card.produces"
+    />
+    <duel-red-army-header
+      *ngIf="card.cardType === 'RED_ARMY'"
+      [shields]="card.shields"
+    />
+    <duel-green-science-header
+      *ngIf="card.cardType === 'GREEN_SCIENCE'"
+      [scienceType]="card.scienceType"
+      [victoryPoints]="card.victoryPoints"
+    />
+    <duel-blue-victory-header
+      *ngIf="card.cardType === 'BLUE_VICTORY'"
+      [points]="card.victoryPoints"
+    />
+    <duel-yellow-commercial-header
+      *ngIf="card.cardType === 'YELLOW_COMMERCIAL'"
+      [card]="card"
+    />
+    <duel-purple-guild-header
+      *ngIf="card.cardType === 'PURPLE_GUILD'"
+      [card]="card"
+    />
+    <duel-link-symbol
+      *ngIf="card.providesLink"
+      class="card-provided-link-symbol"
+      [linkSymbol]="card.providesLink"
+      [size]="'LARGE'"
+    />
+  </div>
+
+  <!--  Card Body-->
+  <div class="card-body">
+    <duel-card-payment
+      [coinCost]="card.coinCost"
+      [resourceCost]="card.resourceCost"
+    />
+    <duel-card-payment
+      *ngIf="card.buyWithLink"
+      [linkSymbol]="card.buyWithLink"
+    />
+  </div>
+
+  <!--  Card Footer-->
+  <div class="card-footer">
+    <div class="card-name">
+      <p>{{ card.name }}</p>
+    </div>
+  </div>
+
+</div>

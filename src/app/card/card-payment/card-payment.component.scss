@@ -1,0 +1,28 @@
+.card-payment-wrapper {
+  padding: 5px 0;
+
+  .card-payment-resources {
+    width: fit-content;
+    height: 10px;
+  }
+
+  .card-payment-link {
+    width: 15px;
+    height: 15px;
+  }
+
+  .card-payment-resources,
+  .card-payment-link {
+    background-color: #222;
+
+    padding-left: 5px;
+    padding-left: 3px;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2px;
+  }
+}

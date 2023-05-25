@@ -1,0 +1,9 @@
+<div class="science-stage--container">
+  <div *ngFor="let token of tokens" class="science-stage--place">
+    <duel-science-token *ngIf="token else emptyToken" [type]="token" [size]="'LARGE'"/>
+  </div>
+</div>
+
+<ng-template #emptyToken>
+  <div class="science-stage-empty-token"></div>
+</ng-template>
