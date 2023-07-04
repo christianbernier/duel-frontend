@@ -1,0 +1,66 @@
+.player-state--container {
+  width: 40vw;
+  height: 600px;
+  background-color: rgba(100, 100, 100, 0.8);
+  position: fixed;
+  bottom: 10px;
+  z-index: 100;
+  border-radius: 5px;
+  padding: 10px;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  grid-template-columns: auto;
+  gap: 5px;
+
+  &.player-state--left {
+    left: 10px;
+  }
+
+  &.player-state--right {
+    right: 10px;
+  }
+
+  .player-state--header {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    .player-state--name {
+      color: white;
+      font-size: 1.5rem;
+    }
+  }
+
+  .player-state--content-container {
+    display: grid;
+    grid-auto-rows: auto 1fr;
+    grid-template-columns: auto;
+    gap: 5px;
+
+    .player-state--content-static {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .player-state--content-scroll {
+      overflow: auto;
+    }
+  }
+}
+
+.player-state--open-button-container {
+  position: fixed;
+  bottom: 10px;
+
+  &.player-state--left {
+    left: 10px;
+  }
+
+  &.player-state--right {
+    right: 10px;
+  }
+}

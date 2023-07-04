@@ -6,9 +6,6 @@ import {Observable} from "rxjs";
   providedIn: 'root'
 })
 export class WebSocketService {
-
-  constructor() { }
-
   public connect<T>(
     url: string,
     send: Observable<T>,

@@ -1,13 +1,8 @@
-.room--game-in-progress {
+.room--container {
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--c-gray-800);
   display: flex;
-  flex-direction: column;
-  gap: 10px;
   align-items: center;
-
-  .room--game-stages {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+  justify-content: center;
 }
-

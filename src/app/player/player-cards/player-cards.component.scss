@@ -1,0 +1,17 @@
+.player-cards--container {
+  .player-cards--card-categories-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+
+    .player-cards--card-category {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+
+      &>duel-card {
+        height: 60px;
+      }
+    }
+  }
+}

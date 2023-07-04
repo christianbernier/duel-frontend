@@ -1,0 +1,13 @@
+<div class="player-wonders--container">
+  <div
+    *ngFor="let wonder of wonders"
+    class="player-wonders--wonder-wrapper"
+  >
+    <duel-wonder-card
+      [type]="wonder.type"
+      [disabled]="wonder.disabled"
+      [claimedWith]="wonder.claimedWith"
+      [resourceCost]="wonder.resourceCost"
+    ></duel-wonder-card>
+  </div>
+</div>

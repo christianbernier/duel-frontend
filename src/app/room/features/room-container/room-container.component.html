@@ -1,37 +1,29 @@
-<div>
-  Room container:
-  <button
-    (click)="joinRoom()"
-  >
-    Join room with uid 'test'
-  </button>
-  <button
-    (click)="startGame()"
-  >
-    Start game
-  </button>
-  <div>uid: {{ roomFacade.roomUid$ | async }}</div>
-  <div>error: {{ roomFacade.joinRoomError$ | async }}</div>
-<!--  <div>state: {{ roomFacade.gameState$ | async | stringify }}</div>-->
-  <div>server error: {{ roomFacade.serverError$ | async }}</div>
-</div>
+<duel-modal
+  [shown]="!name"
+  [title]="'Enter name'"
+  [canCancel]="false"
+  [submitButtonText]="'Join'"
+  [content]="nameModalBody"
+  (onSubmit)="nameEntered()"
+></duel-modal>
 
-<div
-  *ngIf="(roomFacade.gameState$ | async)?.inProgress"
-  class="room--game-in-progress"
->
-  <div class="room--game-stages">
-    <duel-science-stage
-      [tokens]="(roomFacade.gameState$ | async)!.scienceTokens"
-    ></duel-science-stage>
-    <duel-army-stage
-      [tokenPosition]="(roomFacade.gameState$ | async)!.warStatus"
-      [lootingStatusA]="(roomFacade.gameState$ | async)!.playerA!.warLootingStatus"
-      [lootingStatusB]="(roomFacade.gameState$ | async)!.playerB!.warLootingStatus"
-    ></duel-army-stage>
-  </div>
-  <duel-card-stage
-    [cards]="(roomFacade.gameState$ | async)!.cardStage"
-    (clicked)="cardClicked($event)"
-  ></duel-card-stage>
+<ng-template #nameModalBody>
+  <p>Please enter your name to join the room!</p>
+  <duel-input
+    (textChanged)="nameChanged($event)"
+  ></duel-input>
+</ng-template>
+
+<div class="room--container">
+  <duel-room-pre-game
+    *ngIf="!(roomFacade.gameState$ | async)?.inProgress"
+    [gameState]="roomFacade.gameState$ | async"
+    (onStart)="startGame()"
+  >
+  </duel-room-pre-game>
+  <duel-room-game-in-progress
+    *ngIf="(roomFacade.gameState$ | async)?.inProgress"
+    [gameState]="(roomFacade.gameState$ | async)!"
+  ></duel-room-game-in-progress>
+  <duel-room-uid-label [uid]="uid"></duel-room-uid-label>
 </div>

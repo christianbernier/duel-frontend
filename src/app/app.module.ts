@@ -10,6 +10,15 @@ import {RoomModule} from "./room/room.module";
 import {roomReducer} from "./room/store/reducers/room.reducer";
 import { EffectsModule } from '@ngrx/effects';
 import { StringifyPipe } from './shared/pipes/stringify/stringify.pipe';
+import {WonderModule} from "./wonder/wonder.module";
+import {HomeModule} from "./home/home.module";
+import {homeReducer} from "./home/store/reducers";
+import {CreateRoomEffects} from "./home/store/effects/create-room.effects";
+import {NotFoundModule} from "./not-found/not-found.module";
+import { heroPlusCircle, heroXMark } from '@ng-icons/heroicons/outline';
+import {NgIconsModule} from "@ng-icons/core";
+import {heroQuestionMarkCircleSolid, heroUserCircleSolid} from "@ng-icons/heroicons/solid";
+import {heroCheckMini, heroDocumentDuplicateMini} from "@ng-icons/heroicons/mini";
 
 @NgModule({
   declarations: [
@@ -21,6 +30,19 @@ import { StringifyPipe } from './shared/pipes/stringify/stringify.pipe';
     CardModule,
     SharedModule,
     RoomModule,
+    HomeModule,
+    NotFoundModule,
+    WonderModule,
+    StoreModule.forRoot({}),
+    EffectsModule.forRoot([]),
+    NgIconsModule.withIcons({
+      heroPlusCircle,
+      heroXMark,
+      heroUserCircleSolid,
+      heroQuestionMarkCircleSolid,
+      heroDocumentDuplicateMini,
+      heroCheckMini,
+    }),
 ],
   providers: [],
   bootstrap: [AppComponent]

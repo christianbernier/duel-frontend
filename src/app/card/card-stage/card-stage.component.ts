@@ -15,6 +15,7 @@ export class CardStageComponent {
   }
 
   public cardClicked(card: Card) {
+    console.log(card)
     this.clicked.next(card);
   }
 }

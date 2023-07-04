@@ -1,0 +1,32 @@
+<div
+  *ngIf="shown"
+  class="modal--backdrop"
+>
+  <div class="modal--container">
+    <!-- HEADER -->
+    <div class="modal--header">
+      <span class="modal--title">{{ title || 'Modal' }}</span>
+      <duel-close-button *ngIf="canCancel" (closeClicked)="cancel()"></duel-close-button>
+    </div>
+
+    <!-- BODY -->
+    <div class="modal--body">
+      <div [ngTemplateOutlet]="content"></div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="modal--footer">
+      <duel-button
+        *ngIf="canCancel"
+        [label]="cancelButtonText || 'Cancel'"
+        [type]="'SECONDARY'"
+        (onClick)="cancel()"
+      ></duel-button>
+      <duel-button
+        [label]="submitButtonText || 'Submit'"
+        [type]="'PRIMARY'"
+        (onClick)="submit()"
+      ></duel-button>
+    </div>
+  </div>
+</div>

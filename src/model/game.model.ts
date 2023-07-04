@@ -5,8 +5,9 @@ import {CardStage} from "./card.model";
 export type GameState = {
   // General
   inProgress: boolean;
-  playerA: PlayerState;
-  playerB: PlayerState;
+  playerA: PlayerState | null;
+  playerB: PlayerState | null;
+  turn: 'A' | 'B';
 
   // Card Stage
   cardStage: CardStage;
@@ -15,7 +16,7 @@ export type GameState = {
   warStatus: number | 'A_VICTORY' | 'B_VICTORY';
 
   // Science
-  scienceTokens: ScienceProgressToken[];
+  scienceTokens: (ScienceProgressToken | null)[];
 
   // Other
 }

@@ -1,0 +1,14 @@
+.player-wonders--container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 5px;
+
+  .player-wonders--wonder-wrapper {
+    width: 100%;
+    heigth: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

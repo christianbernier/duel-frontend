@@ -26,6 +26,12 @@ import { LootingTokenComponent } from './components/army/looting-token/looting-t
 import { BrokenCoinComponent } from './components/coin/broken-coin/broken-coin.component';
 import { ArmyStageComponent } from './components/army/army-stage/army-stage.component';
 import {StringifyPipe} from "./pipes/stringify/stringify.pipe";
+import { CoinComponent } from './components/coin/coin/coin.component';
+import {ModalComponent} from "./components/modal/modal/modal.component";
+import { ButtonComponent } from './components/ui/button/button.component';
+import {NgIconComponent} from "@ng-icons/core";
+import { InputComponent } from './components/ui/input/input.component';
+import { CloseButtonComponent } from './components/ui/close-button/close-button.component';
 
 @NgModule({
   declarations: [
@@ -55,6 +61,11 @@ import {StringifyPipe} from "./pipes/stringify/stringify.pipe";
     BrokenCoinComponent,
     ArmyStageComponent,
     StringifyPipe,
+    CoinComponent,
+    ModalComponent,
+    ButtonComponent,
+    InputComponent,
+    CloseButtonComponent,
   ],
   exports: [
     WoodComponent,
@@ -82,9 +93,15 @@ import {StringifyPipe} from "./pipes/stringify/stringify.pipe";
     LootingTokenComponent,
     ArmyStageComponent,
     StringifyPipe,
+    CoinComponent,
+    ModalComponent,
+    ButtonComponent,
+    InputComponent,
+    CloseButtonComponent,
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    NgIconComponent,
   ]
 })
 export class SharedModule { }

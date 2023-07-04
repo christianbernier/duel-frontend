@@ -3,14 +3,16 @@ import {createSelector} from "@ngrx/store";
 import {GameState} from "../../../../model/game.model";
 
 export interface AppState {
-  room: RoomState,
+  room: {
+    room: RoomState,
+  },
 }
 
-export const selectRoomState = (state: AppState) => state.room;
+export const selectRoomState = (state: AppState) => state.room.room;
 
 export const getRoomUid = createSelector(
   selectRoomState,
-  (state: RoomState): string => state.roomUid,
+  (state: RoomState): string => state.roomUid
 );
 
 export const getJoinRoomError = createSelector(

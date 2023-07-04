@@ -1,6 +1,7 @@
 import * as fromActions from '../actions';
 import {createReducer, on} from "@ngrx/store";
 import {GameState} from "../../../../model/game.model";
+import {EXAMPLE_IN_PROGRESS_GAME_STATE} from "../../../../model/fixtures/game.fixture";
 
 export interface RoomState {
   roomUid: string;
@@ -13,6 +14,7 @@ export const initialState: RoomState = {
   roomUid: '',
   joinRoomError: '',
   serverError: null,
+  // gameState: EXAMPLE_IN_PROGRESS_GAME_STATE,
   gameState: null,
 }
 

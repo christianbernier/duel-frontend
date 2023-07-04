@@ -1,0 +1,23 @@
+<div class="wonder-card--container">
+  <img src="{{ imagePath }}"/>
+  <div class="wonder-card--resources">
+    <duel-resource
+      *ngFor = "let resource of resourceCost"
+      [resource]="resource"
+      [size]="'SMALL'"
+    />
+  </div>
+  <div
+    *ngIf="claimedWith"
+    class="wonder-card--claimed-with"
+  >
+    <duel-card-flipped
+      [type]="claimedWith"
+    ></duel-card-flipped>
+  </div>
+  <div
+    *ngIf="disabled"
+    class="wonder-card--disabled"
+  >
+  </div>
+</div>

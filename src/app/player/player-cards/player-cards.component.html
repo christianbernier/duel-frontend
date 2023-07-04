@@ -1,0 +1,13 @@
+<div class="player-cards--container">
+  <div class="player-cards--card-categories-wrapper">
+    <div
+      *ngFor="let cardCategory of cardCategories"
+      class="player-cards--card-category"
+    >
+      <duel-card
+        *ngFor="let card of cardCategory"
+        [card]="card"
+      ></duel-card>
+    </div>
+  </div>
+</div>

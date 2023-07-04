@@ -1,0 +1,51 @@
+<div
+  *ngIf="isOpen"
+  class="player-state--container"
+  [ngClass]="{
+    'player-state--left': side === 'LEFT',
+    'player-state--right': side === 'RIGHT',
+  }"
+>
+  <div class="player-state--header">
+    <span class="player-state--name">
+      {{ state.name }}'s Inventory
+    </span>
+    <duel-close-button
+      (closeClicked)="handleClose()"
+    ></duel-close-button>
+  </div>
+  <div class="player-state--content-container">
+    <div class="player-state--content-static">
+      <duel-player-coins
+        [coins]="state.coins"
+      ></duel-player-coins>
+      <duel-player-science-tokens
+        [tokens]="state.scienceTokens"
+      ></duel-player-science-tokens>
+    </div>
+    <div class="player-state--content-scroll">
+      <duel-player-wonders
+        [wonders]="state.wonders"
+      ></duel-player-wonders>
+      <duel-player-cards
+        [cards]="state.cards"
+      ></duel-player-cards>
+    </div>
+  </div>
+</div>
+
+<div
+  *ngIf="!isOpen"
+  class="player-state--open-button-container"
+  [ngClass]="{
+    'player-state--left': side === 'LEFT',
+    'player-state--right': side === 'RIGHT',
+  }"
+>
+  <duel-button
+    class="player-state--open-button"
+    [label]="'Show ' + state.name + '\'s inventory'"
+    [type]="'SECONDARY'"
+    (onClick)="handleOpen()"
+  ></duel-button>
+</div>

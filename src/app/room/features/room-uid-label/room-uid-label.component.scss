@@ -1,0 +1,20 @@
+.room-uid-label--container {
+  position: fixed;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  gap: var(--margin-sm);
+  cursor: pointer;
+
+  .room-uid-label--label {
+    color: var(--c-gray-100);
+    font-family: var(--ff-secondary);
+    font-size: var(--fs-md);
+  }
+
+  .room-uid-label--icon {
+    color: var(--c-gray-100);
+  }
+}

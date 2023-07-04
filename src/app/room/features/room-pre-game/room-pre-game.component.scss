@@ -1,0 +1,21 @@
+.room-pre-game--container {
+  width: fit-content;
+  background-color: var(--c-gray-300);
+  display: flex;
+  flex-direction: column;
+  gap: var(--margin-xl);
+  padding: var(--margin-xl);
+  border-radius: var(--br-lg);
+  align-items: center;
+
+  &>.room-pre-game--instructions {
+    max-width: 300px;
+    text-align: center;
+  }
+
+  &>.room-pre-game--players {
+    display: flex;
+    flex-direction: row;
+    gap: var(--margin-md);
+  }
+}

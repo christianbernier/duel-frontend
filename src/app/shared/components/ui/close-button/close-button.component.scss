@@ -1,0 +1,16 @@
+.close-button {
+  aspect-ratio: 1;
+  width: 30px;
+  background-color: var(--c-gray-200);
+  border: 2px solid var(--c-gray-300);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--c-gray-800);
+
+  &:hover, &:focus-within {
+    background-color: var(--c-gray-300);
+    border: 2px solid var(--c-gray-400);
+  }
+}

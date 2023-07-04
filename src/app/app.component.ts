@@ -4,6 +4,7 @@ import {BrownResource, GrayResource} from "../model/resource.model";
 import {ScienceProgressToken, ScienceType} from "../model/science.model";
 import {CommercialType} from "../model/commercial.model";
 import {GuildType} from "../model/guild.model";
+import {Wonder, WonderType} from "../model/wonder.model";
 
 @Component({
   selector: 'app-root',
@@ -20,6 +21,11 @@ export class AppComponent {
   public get ScienceProgressToken() {
     return ScienceProgressToken;
   }
+
+  public get WonderType() {
+    return WonderType;
+  }
+
   age1Cards: Card[] = [
     {
       name: 'Lumber Yard',
@@ -856,5 +862,144 @@ export class AppComponent {
     [{type: 'PLACEHOLDER'}, {type: 'FACE_UP', faceUpCard: this.age1Cards[7]}, {type: 'FACE_UP', faceUpCard: this.age1Cards[3]}, {type: 'FACE_UP', faceUpCard: this.age1Cards[20]}, {type: 'FACE_UP', faceUpCard: this.age1Cards[16]}, {type: 'PLACEHOLDER'}],
     [{type: 'PLACEHOLDER'}, {type: 'FACE_DOWN', faceDownCard: FlippedCardType.AGE_1}, {type: 'FACE_DOWN', faceDownCard: FlippedCardType.AGE_1}, {type: 'FACE_DOWN', faceDownCard: FlippedCardType.AGE_1}, {type: 'FACE_DOWN', faceDownCard: FlippedCardType.AGE_1}, {type: 'FACE_DOWN', faceDownCard: FlippedCardType.AGE_1}],
     [{type: 'FACE_UP', faceUpCard: this.age1Cards[0]}, {type: 'FACE_UP', faceUpCard: this.age1Cards[9]}, {type: 'FACE_UP', faceUpCard: this.age1Cards[3]}, {type: 'FACE_UP', faceUpCard: this.age1Cards[22]}, {type: 'FACE_UP', faceUpCard: this.age1Cards[18]}, {type: 'FACE_UP', faceUpCard: this.age1Cards[7]}],
+  ]
+
+  public wonders: Wonder[] = [
+    {
+      type: WonderType.THE_TEMPLE_OF_ARTEMIS,
+      disabled: false,
+      resourceCost: [
+        GrayResource.PAPYRUS,
+        GrayResource.GLASS,
+        BrownResource.STONE,
+        BrownResource.WOOD,
+      ],
+      claimedWith: null,
+    },
+    {
+      type: WonderType.PIRAEUS,
+      disabled: false,
+      resourceCost: [
+        BrownResource.CLAY,
+        BrownResource.STONE,
+        BrownResource.WOOD,
+        BrownResource.WOOD,
+      ],
+      claimedWith: null,
+    },
+    {
+      type: WonderType.THE_HANGING_GARDENS,
+      disabled: false,
+      resourceCost: [
+        GrayResource.PAPYRUS,
+        GrayResource.GLASS,
+        BrownResource.WOOD,
+        BrownResource.WOOD,
+      ],
+      claimedWith: null,
+    },
+    {
+      type: WonderType.THE_SPHINX,
+      disabled: false,
+      resourceCost: [
+        GrayResource.GLASS,
+        GrayResource.GLASS,
+        BrownResource.CLAY,
+        BrownResource.STONE,
+      ],
+      claimedWith: null,
+    },
+    {
+      type: WonderType.THE_APPIAN_WAY,
+      disabled: false,
+      resourceCost: [
+        GrayResource.PAPYRUS,
+        BrownResource.CLAY,
+        BrownResource.CLAY,
+        BrownResource.STONE,
+        BrownResource.STONE,
+      ],
+      claimedWith: null,
+    },
+    {
+      type: WonderType.THE_GREAT_LIBRARY,
+      disabled: false,
+      resourceCost: [
+        GrayResource.PAPYRUS,
+        GrayResource.GLASS,
+        BrownResource.WOOD,
+        BrownResource.WOOD,
+        BrownResource.WOOD,
+      ],
+      claimedWith: null,
+    },
+    {
+      type: WonderType.THE_PYRAMIDS,
+      disabled: false,
+      resourceCost: [
+        GrayResource.PAPYRUS,
+        BrownResource.STONE,
+        BrownResource.STONE,
+        BrownResource.STONE,
+      ],
+      claimedWith: null,
+    },
+    {
+      type: WonderType.THE_GREAT_LIGHTHOUSE,
+      disabled: false,
+      resourceCost: [
+        GrayResource.PAPYRUS,
+        GrayResource.PAPYRUS,
+        BrownResource.STONE,
+        BrownResource.WOOD,
+      ],
+      claimedWith: null,
+    },
+    {
+      type: WonderType.THE_MAUSOLEUM,
+      disabled: false,
+      resourceCost: [
+        GrayResource.PAPYRUS,
+        GrayResource.GLASS,
+        GrayResource.GLASS,
+        BrownResource.CLAY,
+        BrownResource.CLAY,
+      ],
+      claimedWith: null,
+    },
+    {
+      type: WonderType.CIRCUS_MAXIMUS,
+      disabled: false,
+      resourceCost: [
+        GrayResource.GLASS,
+        BrownResource.WOOD,
+        BrownResource.STONE,
+        BrownResource.STONE,
+      ],
+      claimedWith: null,
+    },
+    {
+      type: WonderType.THE_STATUE_OF_ZEUS,
+      disabled: false,
+      resourceCost: [
+        GrayResource.PAPYRUS,
+        GrayResource.PAPYRUS,
+        BrownResource.CLAY,
+        BrownResource.WOOD,
+        BrownResource.STONE,
+      ],
+      claimedWith: null,
+    },
+    {
+      type: WonderType.THE_COLOSSUS,
+      disabled: false,
+      resourceCost: [
+        GrayResource.GLASS,
+        BrownResource.CLAY,
+        BrownResource.CLAY,
+        BrownResource.CLAY,
+      ],
+      claimedWith: null,
+    },
   ]
 }

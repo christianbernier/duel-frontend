@@ -1,0 +1,12 @@
+<div
+  class="coin--container"
+  [ngClass]="{
+    'large-coin': size === 'LARGE',
+    'small-coin': size === 'SMALL',
+    'coin-6': amount === 6,
+    'coin-3': amount === 3,
+    'coin-1': amount === 1,
+  }"
+>
+  {{ amount }}
+</div>

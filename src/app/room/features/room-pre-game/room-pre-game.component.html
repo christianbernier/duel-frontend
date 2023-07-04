@@ -1,0 +1,22 @@
+<div *ngIf="gameState" class="room-pre-game--container">
+  <div class="room-pre-game--instructions">
+    <span *ngIf="!canStart">Invite a friend to play with you by sharing the room code at the bottom of the screen!</span>
+    <span *ngIf="canStart">When you're ready, click the Start Game button to begin!</span>
+  </div>
+  <div class="room-pre-game--players">
+    <duel-player-joining-state
+      [joined]="!!gameState.playerA"
+      [name]="gameState.playerA?.name || ''"
+    ></duel-player-joining-state>
+    <duel-player-joining-state
+      [joined]="!!gameState.playerB"
+      [name]="gameState.playerB?.name || ''"
+    ></duel-player-joining-state>
+  </div>
+  <duel-button
+    [label]="'Start game'"
+    [type]="'PRIMARY'"
+    [disabled]="!canStart"
+    (onClick)="onStart.emit()"
+  ></duel-button>
+</div>

@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
-import {catchError, map, Observable, of, Subject} from "rxjs";
+import {map, Observable, of, Subject} from "rxjs";
 import {WebSocketService} from "../web-socket/web-socket.service";
+import {RestService} from "../rest/rest.service";
+import {Room} from "../../../../model/room";
 
 @Injectable({
   providedIn: 'root'
@@ -9,6 +11,7 @@ export class RoomService {
 
   constructor(
     private webSocketService: WebSocketService,
+    private restService: RestService<Room>,
   ) { }
 
   public joinRoom (
@@ -43,5 +46,12 @@ export class RoomService {
         }
       }
     )
+  }
+
+  public createRoom(): Observable<string> {
+    return this.restService.get('create')
+      .pipe(
+        map((room: Room): string => room.uid)
+      );
   }
 }

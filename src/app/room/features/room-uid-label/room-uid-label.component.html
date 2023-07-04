@@ -1,0 +1,12 @@
+<div
+  class="room-uid-label--container"
+  (click)="copyToClipboard()"
+>
+  <span class="room-uid-label--label">
+    Room code: {{ uid }}
+  </span>
+  <ng-icon
+    class="room-uid-label--icon"
+    [name]="copiedSuccessfully ? 'heroCheckMini' : 'heroDocumentDuplicateMini'"
+  ></ng-icon>
+</div>

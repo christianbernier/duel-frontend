@@ -40,8 +40,8 @@ export class JoinRoomEffects {
           return fromActions.joinRoomSuccess();
         }),
         catchError((error): Observable<Action> => of(fromActions.joinRoomFailure({
-            error: error.message,
-          }))
+              error: error.message,
+            }))
         )
       ) },
   );

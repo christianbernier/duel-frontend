@@ -1,0 +1,25 @@
+<div class="room-game-in-progress--container">
+  <p>It's {{ playerUpName }}'s turn</p>
+  <div class="room-game-in-progress--stages">
+    <duel-science-stage
+      [tokens]="gameState.scienceTokens"
+    ></duel-science-stage>
+    <duel-army-stage
+      [tokenPosition]="gameState.warStatus"
+      [lootingStatusA]="gameState.playerA!.warLootingStatus"
+      [lootingStatusB]="gameState.playerB!.warLootingStatus"
+    ></duel-army-stage>
+  </div>
+  <duel-card-stage
+    [cards]="gameState.cardStage"
+    (clicked)="cardClicked($event)"
+  ></duel-card-stage>
+  <duel-player-state
+    [state]="gameState.playerA!"
+    [side]="'LEFT'"
+  ></duel-player-state>
+  <duel-player-state
+    [state]="gameState.playerB!"
+    [side]="'RIGHT'"
+  ></duel-player-state>
+</div>

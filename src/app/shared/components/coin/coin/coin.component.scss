@@ -1,0 +1,51 @@
+.coin--container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  color: white;
+  font-family: sans-serif;
+
+  &.coin-6 {
+    background-color: #833d12;
+
+    &.large-coin {
+      width: 75px;
+      font-size: 1.6rem;
+    }
+
+    &.small-coin {
+      width: 40px;
+      font-size: 1rem;
+    }
+  }
+
+  &.coin-3 {
+    background-color: #deb922;
+
+    &.large-coin {
+      width: 55px;
+      font-size: 1.4rem;
+    }
+
+    &.small-coin {
+      width: 30px;
+      font-size: 0.8rem;
+    }
+  }
+
+  &.coin-1 {
+    background-color: #8f8f8f;
+
+    &.large-coin {
+      width: 40px;
+      font-size: 1rem;
+    }
+
+    &.small-coin {
+      width: 25px;
+      font-size: 0.7rem;
+    }
+  }
+}

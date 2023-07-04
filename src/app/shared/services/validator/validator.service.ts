@@ -6,9 +6,6 @@ import {PlayerState} from "../../../../model/player.model";
   providedIn: 'root'
 })
 export class ValidatorService {
-
-  constructor() { }
-
   private static validate<T>(object: unknown, assertion: (object: unknown) => asserts object is T): object is T {
     try {
       assertion(object);
@@ -62,10 +59,10 @@ export class ValidatorService {
     if (typeof object.inProgress !== 'boolean') throw new Error('inProgress is not boolean.');
 
     if (! ('playerA' in object)) throw new Error('Missing expected field playerA.');
-    this.assertPlayerState(object.playerA);
+    // this.assertPlayerState(object.playerA);
 
     if (! ('playerB' in object)) throw new Error('Missing expected field playerB.');
-    this.assertPlayerState(object.playerB);
+    // this.assertPlayerState(object.playerB);
 
     if (! ('cardStage' in object)) throw new Error('Missing expected field cardStage.');
     // Assume cardStage is good. Maybe work on this later?

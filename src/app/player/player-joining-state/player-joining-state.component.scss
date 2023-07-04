@@ -1,0 +1,19 @@
+.player-joining-state--container {
+  width: 75px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 75px 20px;
+  gap: var(--margin-md);
+  padding: var(--margin-xl);
+  border-radius: var(--br-lg);
+  background-color: var(--c-gray-400);
+  color: var(--c-gray-50);
+
+  &.player-joining-state--joined {
+    background-color: var(--c-primary-800);
+  }
+
+  &>.player-joining-state--name {
+    text-align: center;
+  }
+}

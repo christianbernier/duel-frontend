@@ -1,0 +1,22 @@
+<div
+  class="player-joining-state--container"
+  [ngClass]="{
+    'player-joining-state--joined': joined,
+  }"
+>
+  <div class="player-joining-state--player-icon">
+    <ng-icon
+      *ngIf="joined"
+      [name]="'heroUserCircleSolid'"
+      [size]="'75px'"
+    ></ng-icon>
+    <ng-icon
+      *ngIf="!joined"
+      [name]="'heroQuestionMarkCircleSolid'"
+      [size]="'75px'"
+    ></ng-icon>
+  </div>
+  <div class="player-joining-state--name">
+    <span *ngIf="joined">{{ name || 'Player' }}</span>
+  </div>
+</div>

@@ -1,0 +1,12 @@
+<button
+  class="button"
+  [ngClass]="{
+    'button--primary': type === 'PRIMARY',
+    'button--secondary': type === 'SECONDARY',
+    'button--disabled': disabled,
+  }"
+  (click)="onClick.emit()"
+>
+  <ng-icon *ngIf="icon" [name]="icon" [size]="'18px'" [strokeWidth]="2.3"></ng-icon>
+  {{ label }}
+</button>
