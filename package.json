@@ -7,8 +7,8 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "lint": "ng lint",
-    "lint:fix": "ng lint --fix"
+    "lint": "ng lint --max-warnings=0",
+    "lint:fix": "ng lint  --max-warnings=0 --fix"
   },
   "private": true,
   "dependencies": {
