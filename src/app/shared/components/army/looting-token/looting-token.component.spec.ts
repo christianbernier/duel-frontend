@@ -8,9 +8,8 @@ describe('LootingTokenComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ LootingTokenComponent ]
-    })
-    .compileComponents();
+      declarations: [LootingTokenComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(LootingTokenComponent);
     component = fixture.componentInstance;

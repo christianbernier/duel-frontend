@@ -1,9 +1,9 @@
-import {Component, Input} from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'duel-player-coins',
   templateUrl: './player-coins.component.html',
-  styleUrls: ['./player-coins.component.scss']
+  styleUrls: ['./player-coins.component.scss'],
 })
 export class PlayerCoinsComponent {
   @Input() coins!: number;

@@ -8,9 +8,8 @@ describe('ResourceDiscountComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ResourceDiscountComponent ]
-    })
-    .compileComponents();
+      declarations: [ResourceDiscountComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(ResourceDiscountComponent);
     component = fixture.componentInstance;

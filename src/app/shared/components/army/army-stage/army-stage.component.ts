@@ -1,10 +1,10 @@
-import {Component, Input} from '@angular/core';
-import {ArmyStagePortion} from "../../../../../model/army.model";
+import { Component, Input } from '@angular/core';
+import { ArmyStagePortion } from '../../../../../model/army.model';
 
 @Component({
   selector: 'duel-army-stage',
   templateUrl: './army-stage.component.html',
-  styleUrls: ['./army-stage.component.scss']
+  styleUrls: ['./army-stage.component.scss'],
 })
 export class ArmyStageComponent {
   @Input() tokenPosition!: number | 'A_VICTORY' | 'B_VICTORY';
@@ -65,12 +65,16 @@ export class ArmyStageComponent {
     {
       type: 'VICTORY',
       indices: ['B_VICTORY'],
-    }
-  ]
+    },
+  ];
 
-  public shouldShowBrokenCoin(portion: (ArmyStagePortion & {type: 'POINTS'})): boolean {
-    return portion.coinPenalty !== 0 && (
-      (portion.side === 'A'  && this.lootingStatusA < portion.coinPenalty) ||
-      (portion.side === 'B'  && this.lootingStatusB < portion.coinPenalty))
+  public shouldShowBrokenCoin(
+    portion: ArmyStagePortion & { type: 'POINTS' },
+  ): boolean {
+    return (
+      portion.coinPenalty !== 0 &&
+      ((portion.side === 'A' && this.lootingStatusA < portion.coinPenalty) ||
+        (portion.side === 'B' && this.lootingStatusB < portion.coinPenalty))
+    );
   }
 }

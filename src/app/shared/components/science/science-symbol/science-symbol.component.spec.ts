@@ -8,9 +8,8 @@ describe('ScienceSymbolComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ScienceSymbolComponent ]
-    })
-    .compileComponents();
+      declarations: [ScienceSymbolComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(ScienceSymbolComponent);
     component = fixture.componentInstance;

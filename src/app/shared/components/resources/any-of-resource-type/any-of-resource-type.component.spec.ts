@@ -8,9 +8,8 @@ describe('AnyOfResourceTypeComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ AnyOfResourceTypeComponent ]
-    })
-    .compileComponents();
+      declarations: [AnyOfResourceTypeComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(AnyOfResourceTypeComponent);
     component = fixture.componentInstance;

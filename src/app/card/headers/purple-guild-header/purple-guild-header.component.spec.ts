@@ -8,9 +8,8 @@ describe('PurpleGuildHeaderComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ PurpleGuildHeaderComponent ]
-    })
-    .compileComponents();
+      declarations: [PurpleGuildHeaderComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(PurpleGuildHeaderComponent);
     component = fixture.componentInstance;

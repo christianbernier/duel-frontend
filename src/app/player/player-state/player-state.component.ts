@@ -1,20 +1,16 @@
-import {Component, Input, OnChanges, SimpleChanges} from '@angular/core';
-import {PlayerState} from "../../../model/player.model";
+import { Component, Input } from '@angular/core';
+import { PlayerState } from '../../../model/player.model';
 
 @Component({
   selector: 'duel-player-state',
   templateUrl: './player-state.component.html',
-  styleUrls: ['./player-state.component.scss']
+  styleUrls: ['./player-state.component.scss'],
 })
-export class PlayerStateComponent implements OnChanges {
+export class PlayerStateComponent {
   @Input() state!: PlayerState;
   @Input() side!: 'LEFT' | 'RIGHT';
 
-  public isOpen: boolean = false;
-
-  public ngOnChanges(changes: SimpleChanges) {
-    console.log(this.state);
-  }
+  public isOpen = false;
 
   public handleClose(): void {
     this.isOpen = false;

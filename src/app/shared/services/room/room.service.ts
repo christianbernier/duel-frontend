@@ -1,20 +1,19 @@
 import { Injectable } from '@angular/core';
-import {map, Observable, of, Subject} from "rxjs";
-import {WebSocketService} from "../web-socket/web-socket.service";
-import {RestService} from "../rest/rest.service";
-import {Room} from "../../../../model/room";
+import { map, Observable, of, Subject } from 'rxjs';
+import { WebSocketService } from '../web-socket/web-socket.service';
+import { RestService } from '../rest/rest.service';
+import { Room } from '../../../../model/room';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class RoomService {
-
   constructor(
     private webSocketService: WebSocketService,
     private restService: RestService<Room>,
-  ) { }
+  ) {}
 
-  public joinRoom (
+  public joinRoom(
     roomUid: string,
     name: string,
     onMessage: (message: object) => void,
@@ -26,32 +25,29 @@ export class RoomService {
     const conn = this.webSocketService.connect<object>(
       url,
       sendMessage,
-      of(false)
+      of(false),
     );
 
-    conn
-      .subscribe({
-        next: (message: object): void => {
-          onMessage(message);
-        },
-        error: (err): void => {
-          if (err?.message) {
-            onError(err);
-          } else {
-            onError(new Error('Unknown error.'));
-          }
-        },
-        complete: (): void => {
-          onError(new Error('Connection closed.'));
+    conn.subscribe({
+      next: (message: object): void => {
+        onMessage(message);
+      },
+      error: (err): void => {
+        if (err?.message) {
+          onError(err);
+        } else {
+          onError(new Error('Unknown error.'));
         }
-      }
-    )
+      },
+      complete: (): void => {
+        onError(new Error('Connection closed.'));
+      },
+    });
   }
 
   public createRoom(): Observable<string> {
-    return this.restService.get('create')
-      .pipe(
-        map((room: Room): string => room.uid)
-      );
+    return this.restService
+      .get('create')
+      .pipe(map((room: Room): string => room.uid));
   }
 }

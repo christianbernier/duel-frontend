@@ -1,10 +1,14 @@
-import {Component, Input, OnInit} from '@angular/core';
-import {BrownResource, GrayResource, Resource} from "../../../../../model/resource.model";
+import { Component, Input, OnInit } from '@angular/core';
+import {
+  BrownResource,
+  GrayResource,
+  Resource,
+} from '../../../../../model/resource.model';
 
 @Component({
   selector: 'duel-any-of-resource-type',
   templateUrl: './any-of-resource-type.component.html',
-  styleUrls: ['./any-of-resource-type.component.scss']
+  styleUrls: ['./any-of-resource-type.component.scss'],
 })
 export class AnyOfResourceTypeComponent implements OnInit {
   @Input() type!: 'BROWN' | 'GRAY';

@@ -1,7 +1,7 @@
-import {BrownResource, GrayResource, Resource} from "./resource.model";
-import {ScienceType} from "./science.model";
-import {CommercialType} from "./commercial.model";
-import {GuildType} from "./guild.model";
+import { BrownResource, GrayResource, Resource } from './resource.model';
+import { ScienceType } from './science.model';
+import { CommercialType } from './commercial.model';
+import { GuildType } from './guild.model';
 
 export enum CardType {
   BROWN_PRODUCTION = 'BROWN_PRODUCTION',
@@ -34,91 +34,100 @@ export enum LinkSymbol {
 }
 
 type BrownProductionCard = {
-  cardType: CardType.BROWN_PRODUCTION,
-  produces: BrownResource[],
-}
+  cardType: CardType.BROWN_PRODUCTION;
+  produces: BrownResource[];
+};
 
 type GrayProductionCard = {
-  cardType: CardType.GRAY_PRODUCTION,
-  produces: GrayResource[],
-}
+  cardType: CardType.GRAY_PRODUCTION;
+  produces: GrayResource[];
+};
 
 type RedArmyCard = {
-  cardType: CardType.RED_ARMY,
-  shields: number,
-}
+  cardType: CardType.RED_ARMY;
+  shields: number;
+};
 
 type GreenScienceCard = {
-  cardType: CardType.GREEN_SCIENCE,
-  victoryPoints: number,
-  scienceType: ScienceType,
-}
+  cardType: CardType.GREEN_SCIENCE;
+  victoryPoints: number;
+  scienceType: ScienceType;
+};
 
 export type YellowCommercialCard = {
-  cardType: CardType.YELLOW_COMMERCIAL,
+  cardType: CardType.YELLOW_COMMERCIAL;
 } & (
-  {
-    commercialType: CommercialType.BROWN_RESOURCE_DISCOUNT,
-    resource: BrownResource,
-  } | {
-    commercialType: CommercialType.GRAY_RESOURCE_DISCOUNT,
-    resources: GrayResource[],
-  } | {
-    commercialType: CommercialType.ANY_BROWN_RESOURCE,
-  } | {
-    commercialType: CommercialType.ANY_GRAY_RESOURCE,
-  } | {
-    commercialType: CommercialType.COINS,
-    coins: number,
-  } | {
-    commercialType: CommercialType.COINS_PER_CARD,
-    coinsForCardType: CardType,
-    coinsPerCard: number,
-    victoryPoints: number,
-  } | {
-    commercialType: CommercialType.COINS_PER_WONDER,
-    coinsPerWonder: number,
-    victoryPoints: number,
-  });
+  | {
+      commercialType: CommercialType.BROWN_RESOURCE_DISCOUNT;
+      resource: BrownResource;
+    }
+  | {
+      commercialType: CommercialType.GRAY_RESOURCE_DISCOUNT;
+      resources: GrayResource[];
+    }
+  | {
+      commercialType: CommercialType.ANY_BROWN_RESOURCE;
+    }
+  | {
+      commercialType: CommercialType.ANY_GRAY_RESOURCE;
+    }
+  | {
+      commercialType: CommercialType.COINS;
+      coins: number;
+    }
+  | {
+      commercialType: CommercialType.COINS_PER_CARD;
+      coinsForCardType: CardType;
+      coinsPerCard: number;
+      victoryPoints: number;
+    }
+  | {
+      commercialType: CommercialType.COINS_PER_WONDER;
+      coinsPerWonder: number;
+      victoryPoints: number;
+    }
+);
 
 type BlueVictoryCard = {
-  cardType: CardType.BLUE_VICTORY,
-  victoryPoints: number,
-}
+  cardType: CardType.BLUE_VICTORY;
+  victoryPoints: number;
+};
 
 export type PurpleGuildCard = {
-  cardType: CardType.PURPLE_GUILD,
+  cardType: CardType.PURPLE_GUILD;
 } & (
-  {
-    guildType: GuildType.VICTORY_POINTS_PER_WONDER,
-    victoryPoints: number,
-  } | {
-    guildType: GuildType.VICTORY_POINTS_PER_COINS,
-    victoryPoints: number,
-    coins: number,
-  } | {
-    guildType: GuildType.VICTORY_POINTS_AND_COINS_PER_CARD_TYPE,
-    victoryPoints: number,
-    coins: number,
-    guildCardTypes: CardType[],
-  }
-)
+  | {
+      guildType: GuildType.VICTORY_POINTS_PER_WONDER;
+      victoryPoints: number;
+    }
+  | {
+      guildType: GuildType.VICTORY_POINTS_PER_COINS;
+      victoryPoints: number;
+      coins: number;
+    }
+  | {
+      guildType: GuildType.VICTORY_POINTS_AND_COINS_PER_CARD_TYPE;
+      victoryPoints: number;
+      coins: number;
+      guildCardTypes: CardType[];
+    }
+);
 
 export type Card = {
-  resourceCost: Resource[],
-  coinCost: number,
-  buyWithLink?: LinkSymbol,
-  providesLink?: LinkSymbol,
-  name: string,
+  resourceCost: Resource[];
+  coinCost: number;
+  buyWithLink?: LinkSymbol;
+  providesLink?: LinkSymbol;
+  name: string;
 } & (
-    BrownProductionCard |
-    GrayProductionCard |
-    RedArmyCard |
-    GreenScienceCard |
-    YellowCommercialCard |
-    BlueVictoryCard |
-    PurpleGuildCard
-  )
+  | BrownProductionCard
+  | GrayProductionCard
+  | RedArmyCard
+  | GreenScienceCard
+  | YellowCommercialCard
+  | BlueVictoryCard
+  | PurpleGuildCard
+);
 
 export enum FlippedCardType {
   AGE_1 = 'AGE_1',
@@ -128,13 +137,15 @@ export enum FlippedCardType {
 }
 
 export type CardStage = (
-  {
-    type: 'FACE_UP',
-    faceUpCard: Card,
-  } | {
-    type: 'FACE_DOWN',
-    faceDownCard: FlippedCardType,
-  } | {
-    type: 'PLACEHOLDER',
-  }
+  | {
+      type: 'FACE_UP';
+      faceUpCard: Card;
+    }
+  | {
+      type: 'FACE_DOWN';
+      faceDownCard: FlippedCardType;
+    }
+  | {
+      type: 'PLACEHOLDER';
+    }
 )[][];

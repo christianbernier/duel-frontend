@@ -8,9 +8,8 @@ describe('CardIconComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CardIconComponent ]
-    })
-    .compileComponents();
+      declarations: [CardIconComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(CardIconComponent);
     component = fixture.componentInstance;

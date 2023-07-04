@@ -1,5 +1,5 @@
-import {Resource} from "./resource.model";
-import {FlippedCardType} from "./card.model";
+import { Resource } from './resource.model';
+import { FlippedCardType } from './card.model';
 
 export enum WonderType {
   THE_APPIAN_WAY = 'THE_APPIAN_WAY',
@@ -21,4 +21,4 @@ export type Wonder = {
   disabled: boolean;
   resourceCost: Resource[];
   claimedWith: FlippedCardType | null;
-}
+};

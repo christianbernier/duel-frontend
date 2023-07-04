@@ -1,10 +1,10 @@
-import {Component, EventEmitter, Input, Output} from '@angular/core';
-import {IconName} from "@ng-icons/core";
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { IconName } from '@ng-icons/core';
 
 @Component({
   selector: 'duel-button',
   templateUrl: './button.component.html',
-  styleUrls: ['./button.component.scss']
+  styleUrls: ['./button.component.scss'],
 })
 export class ButtonComponent {
   @Input() label!: string;

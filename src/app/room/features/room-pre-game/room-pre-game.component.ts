@@ -1,10 +1,10 @@
-import {Component, EventEmitter, Input, Output} from '@angular/core';
-import {GameState} from "../../../../model/game.model";
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { GameState } from '../../../../model/game.model';
 
 @Component({
   selector: 'duel-room-pre-game',
   templateUrl: './room-pre-game.component.html',
-  styleUrls: ['./room-pre-game.component.scss']
+  styleUrls: ['./room-pre-game.component.scss'],
 })
 export class RoomPreGameComponent {
   @Input() gameState!: GameState | null;

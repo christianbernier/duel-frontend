@@ -8,9 +8,8 @@ describe('PlayerScienceTokensComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ PlayerScienceTokensComponent ]
-    })
-    .compileComponents();
+      declarations: [PlayerScienceTokensComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(PlayerScienceTokensComponent);
     component = fixture.componentInstance;

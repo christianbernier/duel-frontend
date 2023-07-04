@@ -1,10 +1,10 @@
-import {Component, Input} from '@angular/core';
-import {LinkSymbol} from "../../../../../model/card.model";
+import { Component, Input } from '@angular/core';
+import { LinkSymbol } from '../../../../../model/card.model';
 
 @Component({
   selector: 'duel-link-symbol',
   templateUrl: './link-symbol.component.html',
-  styleUrls: ['./link-symbol.component.scss']
+  styleUrls: ['./link-symbol.component.scss'],
 })
 export class LinkSymbolComponent {
   @Input() linkSymbol!: LinkSymbol;

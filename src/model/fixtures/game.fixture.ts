@@ -1,10 +1,10 @@
-import {GameState} from "../game.model";
-import {BrownResource, GrayResource} from "../resource.model";
-import {CardType, FlippedCardType, LinkSymbol} from "../card.model";
-import {CommercialType} from "../commercial.model";
-import {ScienceProgressToken, ScienceType} from "../science.model";
-import {GuildType} from "../guild.model";
-import {WonderType} from "../wonder.model";
+import { GameState } from '../game.model';
+import { BrownResource, GrayResource } from '../resource.model';
+import { CardType, FlippedCardType, LinkSymbol } from '../card.model';
+import { CommercialType } from '../commercial.model';
+import { ScienceProgressToken, ScienceType } from '../science.model';
+import { GuildType } from '../guild.model';
+import { WonderType } from '../wonder.model';
 
 export const EXAMPLE_IN_PROGRESS_GAME_STATE: GameState = {
   inProgress: true,
@@ -17,27 +17,21 @@ export const EXAMPLE_IN_PROGRESS_GAME_STATE: GameState = {
         resourceCost: [],
         coinCost: 1,
         cardType: CardType.BROWN_PRODUCTION,
-        produces: [
-          BrownResource.STONE,
-        ]
+        produces: [BrownResource.STONE],
       },
       {
         name: 'Clay Pool',
         resourceCost: [],
         coinCost: 0,
         cardType: CardType.BROWN_PRODUCTION,
-        produces: [
-          BrownResource.CLAY,
-        ]
+        produces: [BrownResource.CLAY],
       },
       {
         name: 'Clay Pit',
         resourceCost: [],
         coinCost: 1,
         cardType: CardType.BROWN_PRODUCTION,
-        produces: [
-          BrownResource.CLAY,
-        ]
+        produces: [BrownResource.CLAY],
       },
       {
         name: 'Theater',
@@ -106,7 +100,7 @@ export const EXAMPLE_IN_PROGRESS_GAME_STATE: GameState = {
         ],
         claimedWith: FlippedCardType.AGE_2,
       },
-    ]
+    ],
   },
   playerB: {
     player: 'B',
@@ -114,9 +108,7 @@ export const EXAMPLE_IN_PROGRESS_GAME_STATE: GameState = {
     cards: [
       {
         name: 'Baths',
-        resourceCost: [
-          BrownResource.STONE,
-        ],
+        resourceCost: [BrownResource.STONE],
         coinCost: 0,
         cardType: CardType.BLUE_VICTORY,
         victoryPoints: 3,
@@ -139,9 +131,7 @@ export const EXAMPLE_IN_PROGRESS_GAME_STATE: GameState = {
       },
       {
         name: 'Stable',
-        resourceCost: [
-          BrownResource.WOOD,
-        ],
+        resourceCost: [BrownResource.WOOD],
         coinCost: 0,
         cardType: CardType.RED_ARMY,
         shields: 1,
@@ -200,12 +190,16 @@ export const EXAMPLE_IN_PROGRESS_GAME_STATE: GameState = {
         ],
         claimedWith: null,
       },
-    ]
+    ],
   },
   turn: 'A',
   cardStage: [
-    [{type: 'PLACEHOLDER'}, {type: 'PLACEHOLDER'},
-      {type: 'FACE_UP', faceUpCard: {
+    [
+      { type: 'PLACEHOLDER' },
+      { type: 'PLACEHOLDER' },
+      {
+        type: 'FACE_UP',
+        faceUpCard: {
           name: 'Port',
           resourceCost: [
             BrownResource.WOOD,
@@ -218,9 +212,12 @@ export const EXAMPLE_IN_PROGRESS_GAME_STATE: GameState = {
           coinsForCardType: CardType.BROWN_PRODUCTION,
           coinsPerCard: 2,
           victoryPoints: 3,
-        },},
-      {type: 'FACE_UP', faceUpCard: {
-          name: 'Merchant\'s Guild',
+        },
+      },
+      {
+        type: 'FACE_UP',
+        faceUpCard: {
+          name: "Merchant's Guild",
           resourceCost: [
             BrownResource.CLAY,
             BrownResource.WOOD,
@@ -230,17 +227,27 @@ export const EXAMPLE_IN_PROGRESS_GAME_STATE: GameState = {
           coinCost: 0,
           cardType: CardType.PURPLE_GUILD,
           guildType: GuildType.VICTORY_POINTS_AND_COINS_PER_CARD_TYPE,
-          guildCardTypes: [
-            CardType.YELLOW_COMMERCIAL,
-          ],
+          guildCardTypes: [CardType.YELLOW_COMMERCIAL],
           coins: 1,
           victoryPoints: 1,
-        },},
-      {type: 'PLACEHOLDER'}, {type: 'PLACEHOLDER'}],
-    [{type: 'PLACEHOLDER'}, {type: 'PLACEHOLDER'}, {type: 'FACE_DOWN', faceDownCard: FlippedCardType.AGE_1}, {type: 'FACE_DOWN', faceDownCard: FlippedCardType.AGE_1}, {type: 'FACE_DOWN', faceDownCard: FlippedCardType.AGE_1}, {type: 'PLACEHOLDER'}],
+        },
+      },
+      { type: 'PLACEHOLDER' },
+      { type: 'PLACEHOLDER' },
+    ],
     [
-      {type: 'PLACEHOLDER'},
-      {type: 'FACE_UP', faceUpCard: {
+      { type: 'PLACEHOLDER' },
+      { type: 'PLACEHOLDER' },
+      { type: 'FACE_DOWN', faceDownCard: FlippedCardType.AGE_1 },
+      { type: 'FACE_DOWN', faceDownCard: FlippedCardType.AGE_1 },
+      { type: 'FACE_DOWN', faceDownCard: FlippedCardType.AGE_1 },
+      { type: 'PLACEHOLDER' },
+    ],
+    [
+      { type: 'PLACEHOLDER' },
+      {
+        type: 'FACE_UP',
+        faceUpCard: {
           name: 'Palace',
           resourceCost: [
             BrownResource.CLAY,
@@ -252,8 +259,11 @@ export const EXAMPLE_IN_PROGRESS_GAME_STATE: GameState = {
           coinCost: 0,
           cardType: CardType.BLUE_VICTORY,
           victoryPoints: 7,
-        },},
-      {type: 'FACE_UP', faceUpCard: {
+        },
+      },
+      {
+        type: 'FACE_UP',
+        faceUpCard: {
           name: 'Academy',
           resourceCost: [
             BrownResource.STONE,
@@ -265,8 +275,11 @@ export const EXAMPLE_IN_PROGRESS_GAME_STATE: GameState = {
           cardType: CardType.GREEN_SCIENCE,
           scienceType: ScienceType.SUN_DIAL,
           victoryPoints: 3,
-        },},
-      {type: 'FACE_UP', faceUpCard: {
+        },
+      },
+      {
+        type: 'FACE_UP',
+        faceUpCard: {
           name: 'Aqueduct',
           resourceCost: [
             BrownResource.STONE,
@@ -277,55 +290,65 @@ export const EXAMPLE_IN_PROGRESS_GAME_STATE: GameState = {
           cardType: CardType.BLUE_VICTORY,
           victoryPoints: 5,
           buyWithLink: LinkSymbol.RAIN,
-        },},
-      {type: 'FACE_UP', faceUpCard: {
+        },
+      },
+      {
+        type: 'FACE_UP',
+        faceUpCard: {
           name: 'Forum',
-          resourceCost: [
-            BrownResource.CLAY,
-          ],
+          resourceCost: [BrownResource.CLAY],
           coinCost: 3,
           cardType: CardType.YELLOW_COMMERCIAL,
           commercialType: CommercialType.ANY_GRAY_RESOURCE,
-        },},
-      {type: 'PLACEHOLDER'}],
+        },
+      },
+      { type: 'PLACEHOLDER' },
+    ],
     [
-      {type: 'PLACEHOLDER'},
-      {type: 'FACE_DOWN', faceDownCard: FlippedCardType.AGE_1},
-      {type: 'FACE_DOWN', faceDownCard: FlippedCardType.AGE_1},
-      {type: 'FACE_DOWN', faceDownCard: FlippedCardType.AGE_1},
-      {type: 'FACE_DOWN', faceDownCard: FlippedCardType.AGE_1},
-      {type: 'FACE_DOWN', faceDownCard: FlippedCardType.AGE_1}],
+      { type: 'PLACEHOLDER' },
+      { type: 'FACE_DOWN', faceDownCard: FlippedCardType.AGE_1 },
+      { type: 'FACE_DOWN', faceDownCard: FlippedCardType.AGE_1 },
+      { type: 'FACE_DOWN', faceDownCard: FlippedCardType.AGE_1 },
+      { type: 'FACE_DOWN', faceDownCard: FlippedCardType.AGE_1 },
+      { type: 'FACE_DOWN', faceDownCard: FlippedCardType.AGE_1 },
+    ],
     [
-      {type: 'FACE_UP', faceUpCard: {
+      {
+        type: 'FACE_UP',
+        faceUpCard: {
           name: 'Glassblower',
           resourceCost: [],
           coinCost: 0,
           cardType: CardType.GRAY_PRODUCTION,
-          produces: [
-            GrayResource.GLASS,
-          ]
-        },},
-      {type: 'FACE_UP', faceUpCard: {
+          produces: [GrayResource.GLASS],
+        },
+      },
+      {
+        type: 'FACE_UP',
+        faceUpCard: {
           name: 'Barracks',
           resourceCost: [],
           coinCost: 3,
           cardType: CardType.RED_ARMY,
           shields: 1,
           buyWithLink: LinkSymbol.SWORD,
-        },},
-      {type: 'FACE_UP', faceUpCard: {
+        },
+      },
+      {
+        type: 'FACE_UP',
+        faceUpCard: {
           name: 'Statue',
-          resourceCost: [
-            BrownResource.CLAY,
-            BrownResource.CLAY,
-          ],
+          resourceCost: [BrownResource.CLAY, BrownResource.CLAY],
           coinCost: 0,
           cardType: CardType.BLUE_VICTORY,
           victoryPoints: 4,
           providesLink: LinkSymbol.COLUMN,
           buyWithLink: LinkSymbol.MASK,
-        },},
-      {type: 'FACE_UP', faceUpCard: {
+        },
+      },
+      {
+        type: 'FACE_UP',
+        faceUpCard: {
           name: 'Observatory',
           resourceCost: [
             BrownResource.STONE,
@@ -337,8 +360,11 @@ export const EXAMPLE_IN_PROGRESS_GAME_STATE: GameState = {
           scienceType: ScienceType.GYROSCOPE,
           victoryPoints: 2,
           buyWithLink: LinkSymbol.TEA,
-        },},
-      {type: 'FACE_UP', faceUpCard: {
+        },
+      },
+      {
+        type: 'FACE_UP',
+        faceUpCard: {
           name: 'Armory',
           resourceCost: [
             BrownResource.STONE,
@@ -351,8 +377,11 @@ export const EXAMPLE_IN_PROGRESS_GAME_STATE: GameState = {
           coinsForCardType: CardType.RED_ARMY,
           coinsPerCard: 1,
           victoryPoints: 3,
-        },},
-      {type: 'FACE_UP', faceUpCard: {
+        },
+      },
+      {
+        type: 'FACE_UP',
+        faceUpCard: {
           name: 'Arena',
           resourceCost: [
             BrownResource.CLAY,
@@ -365,7 +394,9 @@ export const EXAMPLE_IN_PROGRESS_GAME_STATE: GameState = {
           victoryPoints: 3,
           coinsPerWonder: 2,
           buyWithLink: LinkSymbol.BARREL,
-        },}],
+        },
+      },
+    ],
   ],
   warStatus: -2,
   scienceTokens: [
@@ -374,5 +405,5 @@ export const EXAMPLE_IN_PROGRESS_GAME_STATE: GameState = {
     ScienceProgressToken.MASONRY,
     ScienceProgressToken.AGRICULTURE,
     null,
-  ]
-}
+  ],
+};

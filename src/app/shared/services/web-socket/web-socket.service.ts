@@ -1,15 +1,15 @@
 import { Injectable } from '@angular/core';
-import {webSocket, WebSocketSubject} from "rxjs/webSocket";
-import {Observable} from "rxjs";
+import { webSocket, WebSocketSubject } from 'rxjs/webSocket';
+import { Observable } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class WebSocketService {
   public connect<T>(
     url: string,
     send: Observable<T>,
-    close: Observable<boolean>
+    close: Observable<boolean>,
   ): Observable<T> {
     let conn: WebSocketSubject<T>;
 
@@ -22,13 +22,13 @@ export class WebSocketService {
     // When a message is sent, forward it to the connection.
     send.pipe().subscribe((message: T): void => {
       conn.next(message);
-    })
+    });
 
     close.pipe().subscribe((shouldClose: boolean): void => {
       if (shouldClose) {
         conn.complete();
       }
-    })
+    });
 
     return conn.pipe();
   }

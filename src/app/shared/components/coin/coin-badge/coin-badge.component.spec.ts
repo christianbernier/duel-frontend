@@ -8,9 +8,8 @@ describe('CoinBadgeSmallComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CoinBadgeComponent ]
-    })
-    .compileComponents();
+      declarations: [CoinBadgeComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(CoinBadgeComponent);
     component = fixture.componentInstance;

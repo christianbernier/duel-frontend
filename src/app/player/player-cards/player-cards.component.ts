@@ -1,10 +1,10 @@
-import {Component, Input} from '@angular/core';
-import {Card} from "../../../model/card.model";
+import { Component, Input } from '@angular/core';
+import { Card } from '../../../model/card.model';
 
 @Component({
   selector: 'duel-player-cards',
   templateUrl: './player-cards.component.html',
-  styleUrls: ['./player-cards.component.scss']
+  styleUrls: ['./player-cards.component.scss'],
 })
 export class PlayerCardsComponent {
   @Input() cards!: Card[];

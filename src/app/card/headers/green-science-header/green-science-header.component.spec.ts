@@ -8,9 +8,8 @@ describe('GreenScienceHeaderComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ GreenScienceHeaderComponent ]
-    })
-    .compileComponents();
+      declarations: [GreenScienceHeaderComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(GreenScienceHeaderComponent);
     component = fixture.componentInstance;

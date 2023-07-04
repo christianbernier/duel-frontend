@@ -30,7 +30,8 @@
             "prefix": "duel",
             "style": "kebab-case"
           }
-        ]
+        ],
+        "@angular-eslint/no-output-on-prefix": "off"
       }
     },
     {
@@ -48,7 +49,24 @@
       ],
       "extends": [
         "plugin:@ngrx/recommended-requiring-type-checking"
-      ]
+      ],
+      "rules": {
+        "@ngrx/prefix-selectors-with-select": "off",
+        "@ngrx/on-function-explicit-return-type": "off",
+        "@ngrx/no-typed-global-store": "off",
+        "@ngrx/select-style": "off"
+      }
+    },
+    {
+      "files": [
+        "*.ts"
+      ],
+      "plugins": [
+        "prettier"
+      ],
+      "rules": {
+        "prettier/prettier": 2
+      }
     }
   ]
 }

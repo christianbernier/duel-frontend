@@ -8,9 +8,8 @@ describe('RoomUidLabelComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ RoomUidLabelComponent ]
-    })
-    .compileComponents();
+      declarations: [RoomUidLabelComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(RoomUidLabelComponent);
     component = fixture.componentInstance;

@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { WoodComponent } from './components/resources/wood/wood.component';
 import { StoneComponent } from './components/resources/stone/stone.component';
-import {ClayComponent} from "./components/resources/clay/clay.component";
+import { ClayComponent } from './components/resources/clay/clay.component';
 import { ResourceComponent } from './components/resources/resource.component';
 import { GlassComponent } from './components/resources/glass/glass.component';
 import { PapyrusComponent } from './components/resources/papyrus/papyrus.component';
@@ -25,11 +25,11 @@ import { ScienceStageComponent } from './components/science/science-stage/scienc
 import { LootingTokenComponent } from './components/army/looting-token/looting-token.component';
 import { BrokenCoinComponent } from './components/coin/broken-coin/broken-coin.component';
 import { ArmyStageComponent } from './components/army/army-stage/army-stage.component';
-import {StringifyPipe} from "./pipes/stringify/stringify.pipe";
+import { StringifyPipe } from './pipes/stringify/stringify.pipe';
 import { CoinComponent } from './components/coin/coin/coin.component';
-import {ModalComponent} from "./components/modal/modal/modal.component";
+import { ModalComponent } from './components/modal/modal/modal.component';
 import { ButtonComponent } from './components/ui/button/button.component';
-import {NgIconComponent} from "@ng-icons/core";
+import { NgIconComponent } from '@ng-icons/core';
 import { InputComponent } from './components/ui/input/input.component';
 import { CloseButtonComponent } from './components/ui/close-button/close-button.component';
 
@@ -99,9 +99,6 @@ import { CloseButtonComponent } from './components/ui/close-button/close-button.
     InputComponent,
     CloseButtonComponent,
   ],
-  imports: [
-    CommonModule,
-    NgIconComponent,
-  ]
+  imports: [CommonModule, NgIconComponent],
 })
-export class SharedModule { }
+export class SharedModule {}

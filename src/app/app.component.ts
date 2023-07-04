@@ -1,15 +1,21 @@
-import {Component} from '@angular/core';
-import {Card, CardStage, CardType, FlippedCardType, LinkSymbol} from "../model/card.model";
-import {BrownResource, GrayResource} from "../model/resource.model";
-import {ScienceProgressToken, ScienceType} from "../model/science.model";
-import {CommercialType} from "../model/commercial.model";
-import {GuildType} from "../model/guild.model";
-import {Wonder, WonderType} from "../model/wonder.model";
+import { Component } from '@angular/core';
+import {
+  Card,
+  CardStage,
+  CardType,
+  FlippedCardType,
+  LinkSymbol,
+} from '../model/card.model';
+import { BrownResource, GrayResource } from '../model/resource.model';
+import { ScienceProgressToken, ScienceType } from '../model/science.model';
+import { CommercialType } from '../model/commercial.model';
+import { GuildType } from '../model/guild.model';
+import { Wonder, WonderType } from '../model/wonder.model';
 
 @Component({
-  selector: 'app-root',
+  selector: 'duel-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
   title = 'duel';
@@ -32,72 +38,56 @@ export class AppComponent {
       resourceCost: [],
       coinCost: 0,
       cardType: CardType.BROWN_PRODUCTION,
-      produces: [
-        BrownResource.WOOD,
-      ]
+      produces: [BrownResource.WOOD],
     },
     {
       name: 'Logging Camp',
       resourceCost: [],
       coinCost: 1,
       cardType: CardType.BROWN_PRODUCTION,
-      produces: [
-        BrownResource.WOOD,
-      ]
+      produces: [BrownResource.WOOD],
     },
     {
       name: 'Clay Pool',
       resourceCost: [],
       coinCost: 0,
       cardType: CardType.BROWN_PRODUCTION,
-      produces: [
-        BrownResource.CLAY,
-      ]
+      produces: [BrownResource.CLAY],
     },
     {
       name: 'Clay Pit',
       resourceCost: [],
       coinCost: 1,
       cardType: CardType.BROWN_PRODUCTION,
-      produces: [
-        BrownResource.CLAY,
-      ]
+      produces: [BrownResource.CLAY],
     },
     {
       name: 'Quarry',
       resourceCost: [],
       coinCost: 0,
       cardType: CardType.BROWN_PRODUCTION,
-      produces: [
-        BrownResource.STONE,
-      ]
+      produces: [BrownResource.STONE],
     },
     {
       name: 'Stone Pit',
       resourceCost: [],
       coinCost: 1,
       cardType: CardType.BROWN_PRODUCTION,
-      produces: [
-        BrownResource.STONE,
-      ]
+      produces: [BrownResource.STONE],
     },
     {
       name: 'Glassworks',
       resourceCost: [],
       coinCost: 1,
       cardType: CardType.GRAY_PRODUCTION,
-      produces: [
-        GrayResource.GLASS,
-      ]
+      produces: [GrayResource.GLASS],
     },
     {
       name: 'Press',
       resourceCost: [],
       coinCost: 1,
       cardType: CardType.GRAY_PRODUCTION,
-      produces: [
-        GrayResource.PAPYRUS,
-      ]
+      produces: [GrayResource.PAPYRUS],
     },
     {
       name: 'Guard Tower',
@@ -108,9 +98,7 @@ export class AppComponent {
     },
     {
       name: 'Stable',
-      resourceCost: [
-        BrownResource.WOOD,
-      ],
+      resourceCost: [BrownResource.WOOD],
       coinCost: 0,
       cardType: CardType.RED_ARMY,
       shields: 1,
@@ -118,9 +106,7 @@ export class AppComponent {
     },
     {
       name: 'Garrison',
-      resourceCost: [
-        BrownResource.CLAY,
-      ],
+      resourceCost: [BrownResource.CLAY],
       coinCost: 0,
       cardType: CardType.RED_ARMY,
       shields: 1,
@@ -136,9 +122,7 @@ export class AppComponent {
     },
     {
       name: 'Workshop',
-      resourceCost: [
-        GrayResource.PAPYRUS,
-      ],
+      resourceCost: [GrayResource.PAPYRUS],
       coinCost: 0,
       cardType: CardType.GREEN_SCIENCE,
       scienceType: ScienceType.PENDULUM,
@@ -146,9 +130,7 @@ export class AppComponent {
     },
     {
       name: 'Apothecary',
-      resourceCost: [
-        GrayResource.GLASS,
-      ],
+      resourceCost: [GrayResource.GLASS],
       coinCost: 0,
       cardType: CardType.GREEN_SCIENCE,
       scienceType: ScienceType.WHEEL,
@@ -223,15 +205,13 @@ export class AppComponent {
     },
     {
       name: 'Baths',
-      resourceCost: [
-        BrownResource.STONE,
-      ],
+      resourceCost: [BrownResource.STONE],
       coinCost: 0,
       cardType: CardType.BLUE_VICTORY,
       victoryPoints: 3,
       providesLink: LinkSymbol.RAIN,
     },
-  ]
+  ];
 
   age2Cards: Card[] = [
     {
@@ -239,65 +219,46 @@ export class AppComponent {
       resourceCost: [],
       coinCost: 2,
       cardType: CardType.BROWN_PRODUCTION,
-      produces: [
-        BrownResource.WOOD,
-        BrownResource.WOOD,
-      ]
+      produces: [BrownResource.WOOD, BrownResource.WOOD],
     },
     {
       name: 'Brickyard',
       resourceCost: [],
       coinCost: 2,
       cardType: CardType.BROWN_PRODUCTION,
-      produces: [
-        BrownResource.CLAY,
-        BrownResource.CLAY,
-      ]
+      produces: [BrownResource.CLAY, BrownResource.CLAY],
     },
     {
       name: 'Shelf Quarry',
       resourceCost: [],
       coinCost: 2,
       cardType: CardType.BROWN_PRODUCTION,
-      produces: [
-        BrownResource.STONE,
-        BrownResource.STONE,
-      ]
+      produces: [BrownResource.STONE, BrownResource.STONE],
     },
     {
       name: 'Glassblower',
       resourceCost: [],
       coinCost: 0,
       cardType: CardType.GRAY_PRODUCTION,
-      produces: [
-        GrayResource.GLASS,
-      ]
+      produces: [GrayResource.GLASS],
     },
     {
       name: 'Drying Room',
       resourceCost: [],
       coinCost: 0,
       cardType: CardType.GRAY_PRODUCTION,
-      produces: [
-        GrayResource.PAPYRUS,
-      ]
+      produces: [GrayResource.PAPYRUS],
     },
     {
       name: 'Walls',
-      resourceCost: [
-        BrownResource.STONE,
-        BrownResource.STONE,
-      ],
+      resourceCost: [BrownResource.STONE, BrownResource.STONE],
       coinCost: 0,
       cardType: CardType.RED_ARMY,
       shields: 2,
     },
     {
       name: 'Horse Breeders',
-      resourceCost: [
-        BrownResource.CLAY,
-        BrownResource.WOOD,
-      ],
+      resourceCost: [BrownResource.CLAY, BrownResource.WOOD],
       coinCost: 0,
       cardType: CardType.RED_ARMY,
       shields: 1,
@@ -389,19 +350,14 @@ export class AppComponent {
     },
     {
       name: 'Forum',
-      resourceCost: [
-        BrownResource.CLAY,
-      ],
+      resourceCost: [BrownResource.CLAY],
       coinCost: 3,
       cardType: CardType.YELLOW_COMMERCIAL,
       commercialType: CommercialType.ANY_GRAY_RESOURCE,
     },
     {
       name: 'Caravansery',
-      resourceCost: [
-        GrayResource.GLASS,
-        GrayResource.PAPYRUS,
-      ],
+      resourceCost: [GrayResource.GLASS, GrayResource.PAPYRUS],
       coinCost: 2,
       cardType: CardType.YELLOW_COMMERCIAL,
       commercialType: CommercialType.ANY_BROWN_RESOURCE,
@@ -412,7 +368,7 @@ export class AppComponent {
       coinCost: 4,
       cardType: CardType.YELLOW_COMMERCIAL,
       commercialType: CommercialType.GRAY_RESOURCE_DISCOUNT,
-      resources: [GrayResource.PAPYRUS, GrayResource.GLASS]
+      resources: [GrayResource.PAPYRUS, GrayResource.GLASS],
     },
     {
       name: 'Brewery',
@@ -435,10 +391,7 @@ export class AppComponent {
     },
     {
       name: 'Statue',
-      resourceCost: [
-        BrownResource.CLAY,
-        BrownResource.CLAY,
-      ],
+      resourceCost: [BrownResource.CLAY, BrownResource.CLAY],
       coinCost: 0,
       cardType: CardType.BLUE_VICTORY,
       victoryPoints: 4,
@@ -447,10 +400,7 @@ export class AppComponent {
     },
     {
       name: 'Temple',
-      resourceCost: [
-        BrownResource.WOOD,
-        GrayResource.PAPYRUS,
-      ],
+      resourceCost: [BrownResource.WOOD, GrayResource.PAPYRUS],
       coinCost: 0,
       cardType: CardType.BLUE_VICTORY,
       victoryPoints: 4,
@@ -471,10 +421,7 @@ export class AppComponent {
     },
     {
       name: 'Rostrum',
-      resourceCost: [
-        BrownResource.STONE,
-        BrownResource.WOOD,
-      ],
+      resourceCost: [BrownResource.STONE, BrownResource.WOOD],
       coinCost: 0,
       cardType: CardType.BLUE_VICTORY,
       victoryPoints: 4,
@@ -509,7 +456,7 @@ export class AppComponent {
         BrownResource.STONE,
         BrownResource.STONE,
         BrownResource.CLAY,
-        GrayResource.PAPYRUS
+        GrayResource.PAPYRUS,
       ],
       coinCost: 0,
       cardType: CardType.RED_ARMY,
@@ -522,7 +469,7 @@ export class AppComponent {
         BrownResource.WOOD,
         BrownResource.WOOD,
         BrownResource.WOOD,
-        GrayResource.GLASS
+        GrayResource.GLASS,
       ],
       coinCost: 0,
       cardType: CardType.RED_ARMY,
@@ -596,10 +543,7 @@ export class AppComponent {
     },
     {
       name: 'Chamber of Commerce',
-      resourceCost: [
-        GrayResource.PAPYRUS,
-        GrayResource.PAPYRUS,
-      ],
+      resourceCost: [GrayResource.PAPYRUS, GrayResource.PAPYRUS],
       coinCost: 0,
       cardType: CardType.YELLOW_COMMERCIAL,
       commercialType: CommercialType.COINS_PER_CARD,
@@ -741,7 +685,7 @@ export class AppComponent {
       buyWithLink: LinkSymbol.BANK,
     },
     {
-      name: 'Merchant\'s Guild',
+      name: "Merchant's Guild",
       resourceCost: [
         BrownResource.CLAY,
         BrownResource.WOOD,
@@ -751,14 +695,12 @@ export class AppComponent {
       coinCost: 0,
       cardType: CardType.PURPLE_GUILD,
       guildType: GuildType.VICTORY_POINTS_AND_COINS_PER_CARD_TYPE,
-      guildCardTypes: [
-        CardType.YELLOW_COMMERCIAL,
-      ],
+      guildCardTypes: [CardType.YELLOW_COMMERCIAL],
       coins: 1,
       victoryPoints: 1,
     },
     {
-      name: 'Shipowner\'s Guild',
+      name: "Shipowner's Guild",
       resourceCost: [
         BrownResource.CLAY,
         BrownResource.STONE,
@@ -768,15 +710,12 @@ export class AppComponent {
       coinCost: 0,
       cardType: CardType.PURPLE_GUILD,
       guildType: GuildType.VICTORY_POINTS_AND_COINS_PER_CARD_TYPE,
-      guildCardTypes: [
-        CardType.BROWN_PRODUCTION,
-        CardType.GRAY_PRODUCTION,
-      ],
+      guildCardTypes: [CardType.BROWN_PRODUCTION, CardType.GRAY_PRODUCTION],
       coins: 1,
       victoryPoints: 1,
     },
     {
-      name: 'Builder\'s Guild',
+      name: "Builder's Guild",
       resourceCost: [
         BrownResource.STONE,
         BrownResource.STONE,
@@ -790,7 +729,7 @@ export class AppComponent {
       victoryPoints: 2,
     },
     {
-      name: 'Magistrate\'s Guild',
+      name: "Magistrate's Guild",
       resourceCost: [
         BrownResource.WOOD,
         BrownResource.WOOD,
@@ -800,14 +739,12 @@ export class AppComponent {
       coinCost: 0,
       cardType: CardType.PURPLE_GUILD,
       guildType: GuildType.VICTORY_POINTS_AND_COINS_PER_CARD_TYPE,
-      guildCardTypes: [
-        CardType.BLUE_VICTORY,
-      ],
+      guildCardTypes: [CardType.BLUE_VICTORY],
       coins: 1,
       victoryPoints: 1,
     },
     {
-      name: 'Scientist\'s Guild',
+      name: "Scientist's Guild",
       resourceCost: [
         BrownResource.CLAY,
         BrownResource.CLAY,
@@ -817,14 +754,12 @@ export class AppComponent {
       coinCost: 0,
       cardType: CardType.PURPLE_GUILD,
       guildType: GuildType.VICTORY_POINTS_AND_COINS_PER_CARD_TYPE,
-      guildCardTypes: [
-        CardType.GREEN_SCIENCE,
-      ],
+      guildCardTypes: [CardType.GREEN_SCIENCE],
       coins: 1,
       victoryPoints: 1,
     },
     {
-      name: 'Moneylender\'s Guild',
+      name: "Moneylender's Guild",
       resourceCost: [
         BrownResource.STONE,
         BrownResource.STONE,
@@ -838,7 +773,7 @@ export class AppComponent {
       victoryPoints: 1,
     },
     {
-      name: 'Tactician\'s Guild',
+      name: "Tactician's Guild",
       resourceCost: [
         BrownResource.STONE,
         BrownResource.STONE,
@@ -848,21 +783,54 @@ export class AppComponent {
       coinCost: 0,
       cardType: CardType.PURPLE_GUILD,
       guildType: GuildType.VICTORY_POINTS_AND_COINS_PER_CARD_TYPE,
-      guildCardTypes: [
-        CardType.RED_ARMY,
-      ],
+      guildCardTypes: [CardType.RED_ARMY],
       coins: 1,
       victoryPoints: 1,
     },
   ];
 
   public cardStageCards: CardStage = [
-    [{type: 'PLACEHOLDER'}, {type: 'PLACEHOLDER'}, {type: 'FACE_UP', faceUpCard: this.age1Cards[4]}, {type: 'FACE_UP', faceUpCard: this.age1Cards[17]}, {type: 'PLACEHOLDER'}, {type: 'PLACEHOLDER'}],
-    [{type: 'PLACEHOLDER'}, {type: 'PLACEHOLDER'}, {type: 'FACE_DOWN', faceDownCard: FlippedCardType.AGE_1}, {type: 'FACE_DOWN', faceDownCard: FlippedCardType.AGE_1}, {type: 'FACE_DOWN', faceDownCard: FlippedCardType.AGE_1}, {type: 'PLACEHOLDER'}],
-    [{type: 'PLACEHOLDER'}, {type: 'FACE_UP', faceUpCard: this.age1Cards[7]}, {type: 'FACE_UP', faceUpCard: this.age1Cards[3]}, {type: 'FACE_UP', faceUpCard: this.age1Cards[20]}, {type: 'FACE_UP', faceUpCard: this.age1Cards[16]}, {type: 'PLACEHOLDER'}],
-    [{type: 'PLACEHOLDER'}, {type: 'FACE_DOWN', faceDownCard: FlippedCardType.AGE_1}, {type: 'FACE_DOWN', faceDownCard: FlippedCardType.AGE_1}, {type: 'FACE_DOWN', faceDownCard: FlippedCardType.AGE_1}, {type: 'FACE_DOWN', faceDownCard: FlippedCardType.AGE_1}, {type: 'FACE_DOWN', faceDownCard: FlippedCardType.AGE_1}],
-    [{type: 'FACE_UP', faceUpCard: this.age1Cards[0]}, {type: 'FACE_UP', faceUpCard: this.age1Cards[9]}, {type: 'FACE_UP', faceUpCard: this.age1Cards[3]}, {type: 'FACE_UP', faceUpCard: this.age1Cards[22]}, {type: 'FACE_UP', faceUpCard: this.age1Cards[18]}, {type: 'FACE_UP', faceUpCard: this.age1Cards[7]}],
-  ]
+    [
+      { type: 'PLACEHOLDER' },
+      { type: 'PLACEHOLDER' },
+      { type: 'FACE_UP', faceUpCard: this.age1Cards[4] },
+      { type: 'FACE_UP', faceUpCard: this.age1Cards[17] },
+      { type: 'PLACEHOLDER' },
+      { type: 'PLACEHOLDER' },
+    ],
+    [
+      { type: 'PLACEHOLDER' },
+      { type: 'PLACEHOLDER' },
+      { type: 'FACE_DOWN', faceDownCard: FlippedCardType.AGE_1 },
+      { type: 'FACE_DOWN', faceDownCard: FlippedCardType.AGE_1 },
+      { type: 'FACE_DOWN', faceDownCard: FlippedCardType.AGE_1 },
+      { type: 'PLACEHOLDER' },
+    ],
+    [
+      { type: 'PLACEHOLDER' },
+      { type: 'FACE_UP', faceUpCard: this.age1Cards[7] },
+      { type: 'FACE_UP', faceUpCard: this.age1Cards[3] },
+      { type: 'FACE_UP', faceUpCard: this.age1Cards[20] },
+      { type: 'FACE_UP', faceUpCard: this.age1Cards[16] },
+      { type: 'PLACEHOLDER' },
+    ],
+    [
+      { type: 'PLACEHOLDER' },
+      { type: 'FACE_DOWN', faceDownCard: FlippedCardType.AGE_1 },
+      { type: 'FACE_DOWN', faceDownCard: FlippedCardType.AGE_1 },
+      { type: 'FACE_DOWN', faceDownCard: FlippedCardType.AGE_1 },
+      { type: 'FACE_DOWN', faceDownCard: FlippedCardType.AGE_1 },
+      { type: 'FACE_DOWN', faceDownCard: FlippedCardType.AGE_1 },
+    ],
+    [
+      { type: 'FACE_UP', faceUpCard: this.age1Cards[0] },
+      { type: 'FACE_UP', faceUpCard: this.age1Cards[9] },
+      { type: 'FACE_UP', faceUpCard: this.age1Cards[3] },
+      { type: 'FACE_UP', faceUpCard: this.age1Cards[22] },
+      { type: 'FACE_UP', faceUpCard: this.age1Cards[18] },
+      { type: 'FACE_UP', faceUpCard: this.age1Cards[7] },
+    ],
+  ];
 
   public wonders: Wonder[] = [
     {
@@ -1001,5 +969,5 @@ export class AppComponent {
       ],
       claimedWith: null,
     },
-  ]
+  ];
 }

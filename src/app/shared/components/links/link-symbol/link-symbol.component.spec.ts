@@ -8,9 +8,8 @@ describe('LinkSymbolComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ LinkSymbolComponent ]
-    })
-    .compileComponents();
+      declarations: [LinkSymbolComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(LinkSymbolComponent);
     component = fixture.componentInstance;

@@ -3,27 +3,27 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import {CardModule} from "./card/card.module";
-import {SharedModule} from "./shared/shared.module";
+import { CardModule } from './card/card.module';
+import { SharedModule } from './shared/shared.module';
 import { StoreModule } from '@ngrx/store';
-import {RoomModule} from "./room/room.module";
-import {roomReducer} from "./room/store/reducers/room.reducer";
+import { RoomModule } from './room/room.module';
 import { EffectsModule } from '@ngrx/effects';
-import { StringifyPipe } from './shared/pipes/stringify/stringify.pipe';
-import {WonderModule} from "./wonder/wonder.module";
-import {HomeModule} from "./home/home.module";
-import {homeReducer} from "./home/store/reducers";
-import {CreateRoomEffects} from "./home/store/effects/create-room.effects";
-import {NotFoundModule} from "./not-found/not-found.module";
+import { WonderModule } from './wonder/wonder.module';
+import { HomeModule } from './home/home.module';
+import { NotFoundModule } from './not-found/not-found.module';
 import { heroPlusCircle, heroXMark } from '@ng-icons/heroicons/outline';
-import {NgIconsModule} from "@ng-icons/core";
-import {heroQuestionMarkCircleSolid, heroUserCircleSolid} from "@ng-icons/heroicons/solid";
-import {heroCheckMini, heroDocumentDuplicateMini} from "@ng-icons/heroicons/mini";
+import { NgIconsModule } from '@ng-icons/core';
+import {
+  heroQuestionMarkCircleSolid,
+  heroUserCircleSolid,
+} from '@ng-icons/heroicons/solid';
+import {
+  heroCheckMini,
+  heroDocumentDuplicateMini,
+} from '@ng-icons/heroicons/mini';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-  ],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -43,8 +43,8 @@ import {heroCheckMini, heroDocumentDuplicateMini} from "@ng-icons/heroicons/mini
       heroDocumentDuplicateMini,
       heroCheckMini,
     }),
-],
+  ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

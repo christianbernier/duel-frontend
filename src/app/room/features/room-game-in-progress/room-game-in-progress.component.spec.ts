@@ -8,9 +8,8 @@ describe('RoomGameInProgressComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ RoomGameInProgressComponent ]
-    })
-    .compileComponents();
+      declarations: [RoomGameInProgressComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(RoomGameInProgressComponent);
     component = fixture.componentInstance;

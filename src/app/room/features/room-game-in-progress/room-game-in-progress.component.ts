@@ -1,25 +1,25 @@
-import {Component, Input} from '@angular/core';
-import {GameState} from "../../../../model/game.model";
-import {Card} from "../../../../model/card.model";
-import {RoomFacade} from "../../store";
+import { Component, Input } from '@angular/core';
+import { GameState } from '../../../../model/game.model';
+import { Card } from '../../../../model/card.model';
+import { RoomFacade } from '../../store';
 
 @Component({
   selector: 'duel-room-game-in-progress',
   templateUrl: './room-game-in-progress.component.html',
-  styleUrls: ['./room-game-in-progress.component.scss']
+  styleUrls: ['./room-game-in-progress.component.scss'],
 })
 export class RoomGameInProgressComponent {
   @Input() gameState!: GameState;
 
-  public constructor(
-    private roomFacade: RoomFacade,
-  ) { }
+  public constructor(private roomFacade: RoomFacade) {}
 
   public get playerUpName(): string {
+    if (!this.gameState.inProgress) return '';
+
     if (this.gameState.turn === 'A') {
-      return this.gameState.playerA!.name;
+      return this.gameState.playerA.name;
     } else {
-      return this.gameState.playerB!.name;
+      return this.gameState.playerB.name;
     }
   }
 
@@ -27,6 +27,6 @@ export class RoomGameInProgressComponent {
     this.roomFacade.sendMessage({
       type: 'STAGE_CARD_CLICKED',
       card,
-    })
+    });
   }
 }

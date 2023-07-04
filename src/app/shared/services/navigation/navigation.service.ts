@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class NavigationService {
   public getPath(): string {
@@ -17,6 +17,6 @@ export class NavigationService {
   }
 
   public goHome(): void {
-    this.goTo('/')
+    this.goTo('/');
   }
 }

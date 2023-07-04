@@ -8,9 +8,8 @@ describe('GrayProductionHeaderComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ GrayProductionHeaderComponent ]
-    })
-    .compileComponents();
+      declarations: [GrayProductionHeaderComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(GrayProductionHeaderComponent);
     component = fixture.componentInstance;

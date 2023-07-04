@@ -1,5 +1,5 @@
-import {createAction, props} from "@ngrx/store";
-import {GameState} from "../../../../model/game.model";
+import { createAction, props } from '@ngrx/store';
+import { GameState } from '../../../../model/game.model';
 
 export const processMessage = createAction(
   '[ROOM] Process Message',

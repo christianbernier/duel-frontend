@@ -1,10 +1,10 @@
-import {Component, Input} from '@angular/core';
-import {ScienceType} from "../../../../model/science.model";
+import { Component, Input } from '@angular/core';
+import { ScienceType } from '../../../../model/science.model';
 
 @Component({
   selector: 'duel-green-science-header',
   templateUrl: './green-science-header.component.html',
-  styleUrls: []
+  styleUrls: [],
 })
 export class GreenScienceHeaderComponent {
   @Input() scienceType!: ScienceType;

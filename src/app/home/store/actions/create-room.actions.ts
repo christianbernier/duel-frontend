@@ -1,9 +1,7 @@
-import {createAction, props} from "@ngrx/store";
-import {UUID} from "../../../../model/uuid";
+import { createAction, props } from '@ngrx/store';
+import { UUID } from '../../../../model/uuid';
 
-export const createRoom = createAction(
-  '[HOME] Create Room',
-);
+export const createRoom = createAction('[HOME] Create Room');
 
 export const createRoomSuccess = createAction(
   '[HOME] Create Room Success',

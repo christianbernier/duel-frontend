@@ -1,5 +1,5 @@
 import * as fromActions from '../actions';
-import {createReducer, on} from "@ngrx/store";
+import { createReducer, on } from '@ngrx/store';
 
 export interface HomeState {
   roomUid: string;
@@ -9,7 +9,7 @@ export interface HomeState {
 export const initialState: HomeState = {
   roomUid: '',
   createRoomError: null,
-}
+};
 
 export const homeReducer = createReducer(
   initialState,
@@ -18,20 +18,20 @@ export const homeReducer = createReducer(
       ...state,
       roomUid: '',
       createRoomError: null,
-    }
+    };
   }),
   on(fromActions.createRoomSuccess, (state, { uid }) => {
     return {
       ...state,
       roomUid: uid,
       createRoomError: null,
-    }
+    };
   }),
   on(fromActions.createRoomFailure, (state, { error }) => {
     return {
       ...state,
       roomUid: '',
       createRoomError: error,
-    }
+    };
   }),
 );

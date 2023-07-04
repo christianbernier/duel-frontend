@@ -1,18 +1,14 @@
-import {Component, Input, OnInit} from '@angular/core';
-import {RoomFacade} from "../../store";
-import {Card} from "../../../../model/card.model";
-import {ActivatedRoute} from "@angular/router";
-import {NavigationService} from "../../../shared/services/navigation/navigation.service";
+import { Component, Input, OnInit } from '@angular/core';
+import { RoomFacade } from '../../store';
+import { ActivatedRoute } from '@angular/router';
+import { NavigationService } from '../../../shared/services/navigation/navigation.service';
 
 @Component({
   selector: 'duel-room-container',
   templateUrl: './room-container.component.html',
-  styleUrls: ['./room-container.component.scss']
+  styleUrls: ['./room-container.component.scss'],
 })
 export class RoomContainerComponent implements OnInit {
-  // @Input() uid = 'test';
-  // nameInProgress = 'Christian';
-  // name = 'Christian';
   @Input() uid = '';
   nameInProgress = '';
   name = '';
@@ -50,6 +46,6 @@ export class RoomContainerComponent implements OnInit {
   public startGame() {
     this.roomFacade.sendMessage({
       type: 'START_GAME',
-    })
+    });
   }
 }

@@ -8,9 +8,8 @@ describe('CoinSymbolComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CoinSymbolComponent ]
-    })
-    .compileComponents();
+      declarations: [CoinSymbolComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(CoinSymbolComponent);
     component = fixture.componentInstance;

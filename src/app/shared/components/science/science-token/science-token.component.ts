@@ -1,10 +1,10 @@
-import {Component, Input} from '@angular/core';
-import {ScienceProgressToken} from "../../../../../model/science.model";
+import { Component, Input } from '@angular/core';
+import { ScienceProgressToken } from '../../../../../model/science.model';
 
 @Component({
   selector: 'duel-science-token',
   templateUrl: './science-token.component.html',
-  styleUrls: ['./science-token.component.scss']
+  styleUrls: ['./science-token.component.scss'],
 })
 export class ScienceTokenComponent {
   @Input() type!: ScienceProgressToken;

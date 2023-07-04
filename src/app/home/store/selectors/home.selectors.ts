@@ -1,9 +1,8 @@
-import {HomeState} from "../reducers/home.reducer";
-import {createSelector} from "@ngrx/store";
-import {GameState} from "../../../../model/game.model";
+import { HomeState } from '../reducers/home.reducer';
+import { createSelector } from '@ngrx/store';
 
 export interface AppState {
-  home: HomeState,
+  home: HomeState;
 }
 
 export const selectHomeState = (state: AppState) => state.home;
